@@ -6,26 +6,40 @@ font-family: 'Red Hat Text', sans-serif;
 font-family: 'SF Pro', sans-serif;
 
 400 – Normal. 500 – Medium. 600 – Semi Bold (Demi Bold) 700 – Bold.*/
-
-
-:root {
-	--light-color: #f2785c;
-	--dark-color: #0d606f;
+ul {
+	margin: 0;
+	padding: 0;
 }
 
+li {
+	list-style: none;
+}
 
 body {
 	font-family: 'Aleo', serif;
 }
 
+.wrapper {
+	margin: 0 auto;
+}
+
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+	padding: 0 10px;
 }
 
 /*HEADER*/
 
 .header {
+	min-height: 765px;
+	background: url('../assets/preview/garrett.jpg') 0 0/cover no-repeat;
+	font-family: 'Aleo';
+	font-weight: 700;
+	color: #fff;
+}
+
+.header__menu-background {
 	background: rgba(242, 120, 92, 0.7);
 	box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
@@ -34,14 +48,25 @@ body {
 
 .menu {
 	display: flex;
-	justify-content: space-between;
+
 	align-items: center;
+	min-height: 90px;
 }
 
 .header__logo {}
 
 .logo {
-	flex: 0 1 210px;
+	flex: 0 1 353px;
+}
+
+.logo__image {
+	margin-right: 7px;
+}
+
+.logo__name {
+	font-family: 'Magra';
+	font-size: 32px;
+	line-height: 40px;
 }
 
 .header__navigation {}
@@ -51,12 +76,9 @@ body {
 .navigation__list {
 	display: flex;
 	justify-content: space-between;
-	padding: 0;
 }
 
-.navigation__item {
-	list-style-type: none;
-}
+.navigation__item {}
 
 .navigation__link,
 .button-login__link {
@@ -70,26 +92,127 @@ body {
 
 	color: #fff;
 	text-decoration: none;
+
+	transition: 1s;
 }
 
 .navigation__link:hover {
-	text-decoration: underline;
+	color: #0d606f;
 }
 
 .header__button-login {}
 
-.button-login {}
+.button-login {
+	display: flex;
+	justify-content: right;
+	flex: 0 1 280px;
+}
 
 .button-login__link {
+	display: inline-block;
 	padding: 10px 30px;
+
+	text-align: right;
 
 	background: #0d606f;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
 	border-radius: 10px;
+
+	transition: 0.7s;
 }
 
 .button-login__link:hover {
-	opacity: 0.8;
+	background: #f2785c;
+	color: #0d606f;
+}
+
+.header__preview {
+	margin-top: 31px;
+}
+
+.preview {}
+
+.main-title {
+	margin: 0;
+	font-size: 80px;
+	line-height: 96px;
+}
+
+.preview__title {
+	margin-bottom: 31px;
+}
+
+.main-description {
+	font-style: italic;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.preview__description {
+	margin-bottom: 49px;
+}
+
+.form {}
+
+.header__form {}
+
+.header__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	max-width: 848px;
+	padding: 18px 22px;
+
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 16px;
+}
+
+.header__input {
+	box-sizing: border-box;
+	height: 100%;
+	width: 560px;
+	padding: 0 0 0 20px;
+
+	font-style: italic;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+	color: #F2785C;
+
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.header__input::placeholder {
+	color: #F2785C;
+}
+
+.header__button {
+	margin-left: 41px;
+	padding: 13px 30px;
+
+	font-family: 'Red Hat Text';
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 32px;
+	text-decoration: none;
+	color: #fff;
+
+	border: none;
+	border-radius: 10px;
+	background: #0D606F;
+	box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+
+	transition: 1s;
+}
+
+.header__button:hover {
+	cursor: pointer;
+	background: inherit;
+	color: #f2785c;
 }
 
 /*END HEADER*/
