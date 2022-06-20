@@ -16,10 +16,19 @@ li {
 }
 
 body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+
 	font-family: 'Aleo', serif;
 }
 
 .wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+
 	margin: 0 auto;
 }
 
@@ -216,3 +225,77 @@ body {
 }
 
 /*END HEADER*/
+
+/*FOOTER*/
+.footer {
+	background: #ccc;
+
+	font-family: 'Red Hat Text';
+	font-size: 16px;
+	line-height: 21px;
+	color: #FFFFFF;
+}
+
+.info__link,
+.social__link {
+	display: inline-block;
+	padding: 11px 8px;
+
+	transition: 1s;
+}
+
+.info__link:hover,
+.social__link:hover {
+	position: relative;
+	bottom: 1px;
+}
+
+.footer__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__info {}
+
+.info {
+	width: 33.33%;
+}
+
+.info__list {
+	display: flex;
+	align-items: center;
+}
+
+.footer__item {}
+
+
+.info__img {
+	width: 34px;
+	height: 34px;
+}
+
+.info__img-big {
+	width: 70px;
+	height: 30px;
+}
+
+.footer__text {
+	width: 33.33%;
+	text-align: center;
+}
+
+.footer__social {}
+
+.social {
+	width: 33.33%;
+}
+
+.social__list {
+	display: flex;
+	justify-content: right;
+}
+
+.social__item {}
+
+/*END FOOTER*/
