@@ -6,6 +6,8 @@ font-family: 'Red Hat Text', sans-serif;
 font-family: 'SF Pro', sans-serif;
 
 400 – Normal. 500 – Medium. 600 – Semi Bold (Demi Bold) 700 – Bold.*/
+/*GLOBAL*/
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -38,10 +40,24 @@ body {
 	padding: 0 10px;
 }
 
-/*HEADER*/
+.container-big {
+	max-width: 1440px;
+	margin: 0 auto;
+}
+
+.title {
+	font-family: 'Red Hat Text';
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 53px;
+	color: #F2785C;
+}
+
+/*=====================================================HEADER*/
 
 .header {
 	min-height: 765px;
+	margin-bottom: 47px;
 	background: url('../assets/preview/garrett.jpg') 0 0/cover no-repeat;
 	font-family: 'Aleo';
 	font-weight: 700;
@@ -139,8 +155,6 @@ body {
 	margin-top: 31px;
 }
 
-.preview {}
-
 .main-title {
 	margin: 0;
 	font-size: 80px;
@@ -160,8 +174,6 @@ body {
 .preview__description {
 	margin-bottom: 49px;
 }
-
-.form {}
 
 .header__form {}
 
@@ -224,9 +236,53 @@ body {
 	color: #f2785c;
 }
 
-/*END HEADER*/
+/*=====================================================END HEADER*/
 
-/*FOOTER*/
+/*=====================================================MAIN*/
+/*==============================================steps*/
+.main__steps {
+	margin-bottom: 80px;
+}
+
+.steps {}
+
+.steps__title-block {
+	margin-bottom: 33px;
+}
+
+.steps__title {
+	text-align: center;
+}
+
+.steps__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.steps__column {
+	width: 33.33%;
+	padding: 10px 20px;
+}
+
+.steps__icon {
+	display: block;
+	margin: 0 auto 27px auto;
+}
+
+.steps__item {
+	text-align: center;
+	font-size: 20px;
+	line-height: 24px;
+	color: #0D606F;
+}
+
+/*==============================================end steps*/
+
+
+/*=====================================================END MAIN*/
+
+/*=====================================================FOOTER*/
 .footer {
 	background: #ccc;
 
@@ -298,4 +354,4 @@ body {
 
 .social__item {}
 
-/*END FOOTER*/
+/*=====================================================END FOOTER*/
