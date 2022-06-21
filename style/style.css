@@ -58,6 +58,7 @@ li {
 	font-weight: 500;
 	font-size: 40px;
 	line-height: 53px;
+	text-transform: uppercase;
 	color: #F2785C;
 }
 
@@ -322,7 +323,7 @@ li {
 
 /*==============================================destinations*/
 .main__destinations {
-	margin-bottom: 95px;
+	margin-bottom: 81px;
 }
 
 .destinations__title-block {
@@ -427,37 +428,82 @@ li {
 /*==============================================end destinations*/
 
 /*==============================================stories*/
-.main__stories {}
+.main__stories {
+	margin-bottom: -38px;
+}
 
-.stories {}
+.stories {
+	color: #0D606F;
+	background: rgba(255, 255, 255, 0.7);
+}
 
-.container {}
+.stories__title-block {
+	margin-bottom: 66px;
+}
 
-.stories__title-block {}
+.stories__title {
+	text-align: center;
+	margin: 0 80px 0 0;
+}
 
-.stories__title {}
+.stories__column {
+	margin-bottom: 24px;
+}
 
-.title {}
+.stories__item {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0;
+}
 
-.stories__column {}
+.stories__image-block {
+	flex: 1 0 400px;
+	height: 250px;
+	filter: drop-shadow(0px 4px 4px #0D606F);
+	border-radius: 16px;
+	overflow: hidden;
+}
 
-.stories__item {}
+.stories__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 
-.stories__image-block {}
+.stories__text-block {
+	flex: 1 1 auto;
+	padding: 0 6px 0 40px;
+}
 
-.stories__image {}
+.stories__subtitle {
+	margin: 0 0 23px 0;
+	font-size: 35px;
+	line-height: 42px;
+}
 
-.stories__text-block {}
+.stories__text {
+	margin: 0;
+	font-size: 20px;
+	line-height: 24px;
+}
 
-.stories__subtitle {}
+.stories__text-link {
+	font-weight: 600;
+	font-size: 20px;
+	color: #0d606f;
 
-.stories__text {}
+	transition: 1s;
+}
 
-.stories__link {}
+.stories__text-link:hover {
+	color: #F2785C;
+	text-decoration: none;
+}
 
-.stories__button {}
-
-.link {}
+.stories__button {
+	width: 226px;
+	margin: 0 auto 80px auto;
+}
 
 /*==============================================end stories*/
 
