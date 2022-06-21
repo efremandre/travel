@@ -11,8 +11,6 @@ body {
 	font-family: 'Aleo', serif;
 }
 
-
-
 ul {
 	margin: 0;
 	padding: 0;
@@ -27,7 +25,9 @@ li {
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
+
 	max-width: 1440px;
+
 	height: 100%;
 	margin: 0 auto;
 
@@ -48,7 +48,7 @@ li {
 	font-size: 40px;
 	line-height: 53px;
 	text-transform: uppercase;
-	color: #F2785C;
+	color: #f2785c;
 }
 
 .link {
@@ -61,7 +61,7 @@ li {
 	font-size: 24px;
 	line-height: 32px;
 	text-decoration: none;
-	color: #FFFFFF;
+	color: #ffffff;
 
 	background: #0d606f;
 	box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
@@ -85,14 +85,13 @@ li {
 }
 
 /*=====================================================HEADER*/
-
 .header {
 	min-height: 765px;
 	margin-bottom: 47px;
 	background: url('../assets/preview/garrett.jpg') 0 0/cover no-repeat;
 	font-family: 'Aleo';
 	font-weight: 700;
-	color: #fff;
+	color: #ffffff;
 }
 
 .header__menu-background {
@@ -100,16 +99,12 @@ li {
 	box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
-.header__menu {}
-
 .menu {
 	display: flex;
 
 	align-items: center;
 	min-height: 90px;
 }
-
-.header__logo {}
 
 .logo {
 	flex: 0 1 353px;
@@ -124,10 +119,6 @@ li {
 	font-size: 32px;
 	line-height: 40px;
 }
-
-.header__navigation {}
-
-.navigation {}
 
 .navigation__list {
 	display: flex;
@@ -146,7 +137,7 @@ li {
 	font-size: 16px;
 	line-height: 21px;
 
-	color: #fff;
+	color: #ffffff;
 	text-decoration: none;
 
 	transition: 1s;
@@ -155,8 +146,6 @@ li {
 .navigation__link:hover {
 	color: #0d606f;
 }
-
-.header__button-login {}
 
 .button-login {
 	display: flex;
@@ -206,8 +195,6 @@ li {
 	margin-bottom: 49px;
 }
 
-.header__form {}
-
 .header__row {
 	display: flex;
 	justify-content: space-between;
@@ -222,7 +209,6 @@ li {
 }
 
 .header__input {
-	box-sizing: border-box;
 	height: 100%;
 	width: 560px;
 	padding: 0 0 0 20px;
@@ -231,15 +217,16 @@ li {
 	font-weight: 400;
 	font-size: 24px;
 	line-height: 29px;
-	color: #F2785C;
+	color: #f2785c;
 
+	box-sizing: border-box;
 	border: none;
 	background: none;
 	outline: none;
 }
 
 .header__input::placeholder {
-	color: #F2785C;
+	color: #f2785c;
 }
 
 .header__button {
@@ -251,11 +238,11 @@ li {
 	font-size: 24px;
 	line-height: 32px;
 	text-decoration: none;
-	color: #fff;
+	color: #ffffff;
 
 	border: none;
 	border-radius: 10px;
-	background: #0D606F;
+	background: #0d606f;
 	box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
 
 	transition: 1s;
@@ -274,8 +261,6 @@ li {
 .main__steps {
 	margin-bottom: 68px;
 }
-
-.steps {}
 
 .steps__title-block {
 	margin-bottom: 33px;
@@ -312,7 +297,7 @@ li {
 	text-align: center;
 	font-size: 20px;
 	line-height: 24px;
-	color: #0D606F;
+	color: #0d606f;
 }
 
 /*==============================================end steps*/
@@ -376,7 +361,7 @@ li {
 	line-height: 42px;
 	text-transform: uppercase;
 
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 .destinations__circle-row {
@@ -393,7 +378,7 @@ li {
 	height: 20px;
 	margin: 0 5px;
 
-	background: #F2785C;
+	background: #f2785c;
 	border-radius: 50%;
 
 	transition: 1s;
@@ -410,15 +395,13 @@ li {
 }
 
 .circle-opacity:hover {
-	background: #F2785C;
+	background: #f2785c;
 }
 
 .destinations__button {
 	width: 226px;
 	margin: 0 auto 80px auto;
 }
-
-.destinations__link {}
 
 /*==============================================end destinations*/
 
@@ -428,7 +411,7 @@ li {
 }
 
 .stories {
-	color: #0D606F;
+	color: #0d606f;
 	background: rgba(255, 255, 255, 0.7);
 }
 
@@ -454,7 +437,7 @@ li {
 .stories__image-block {
 	flex: 1 0 400px;
 	height: 250px;
-	box-shadow: 0px 4px 10px #0D606F;
+	box-shadow: 0px 4px 10px #0d606f;
 	border-radius: 16px;
 	overflow: hidden;
 }
@@ -491,7 +474,7 @@ li {
 }
 
 .stories__text-link:hover {
-	color: #F2785C;
+	color: #f2785c;
 	text-decoration: none;
 }
 
@@ -509,7 +492,7 @@ li {
 	font-family: 'Red Hat Text';
 	font-size: 16px;
 	line-height: 21px;
-	color: #FFFFFF;
+	color: #ffffff;
 }
 
 .info__link,
@@ -531,8 +514,6 @@ li {
 	justify-content: space-between;
 	align-items: center;
 }
-
-.footer__info {}
 
 .info {
 	width: 33.33%;
@@ -562,8 +543,6 @@ li {
 	text-align: center;
 }
 
-.footer__social {}
-
 .social {
 	width: 33.33%;
 }
@@ -573,7 +552,5 @@ li {
 	justify-content: right;
 	margin: 0 -8px;
 }
-
-.social__item {}
 
 /*=====================================================END FOOTER*/
