@@ -25,21 +25,23 @@ li {
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
-
-	max-width: 1440px;
+	width: 1440px;
 
 	height: 100%;
 	margin: 0 auto;
-
-	background: url('../assets/stories/background.jpg') bottom no-repeat;
 
 	overflow: hidden;
 }
 
 .container {
-	max-width: 1200px;
+	width: 1200px;
 	margin: 0 auto;
 	padding: 0 10px;
+}
+
+.main-title {
+	font-size: 80px;
+	line-height: 96px;
 }
 
 .title {
@@ -84,17 +86,20 @@ li {
 	background: url('../assets/arrow.svg') no-repeat;
 }
 
+.main-description {
+	font-style: italic;
+	font-size: 20px;
+	line-height: 24px;
+}
+
 /*=====================================================HEADER*/
 .header {
-	min-height: 765px;
-	margin-bottom: 47px;
-	background: url('../assets/preview/garrett.jpg') 0 0/cover no-repeat;
-	font-family: 'Aleo';
-	font-weight: 700;
-	color: #ffffff;
+	background: url('../assets/preview/garrett.jpg') center top no-repeat;
 }
 
 .header__menu-background {
+	position: relative;
+	z-index: 99;
 	background: rgba(242, 120, 92, 0.7);
 	box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
@@ -118,14 +123,13 @@ li {
 	font-family: 'Magra';
 	font-size: 32px;
 	line-height: 40px;
+	color: #ffffff;
 }
 
 .navigation__list {
 	display: flex;
 	justify-content: space-between;
 }
-
-.navigation__item {}
 
 .navigation__link,
 .button-login__link {
@@ -144,6 +148,7 @@ li {
 }
 
 .navigation__link:hover {
+	text-decoration: underline;
 	color: #0d606f;
 }
 
@@ -167,49 +172,48 @@ li {
 }
 
 .button-login__link:hover {
-	background: #f2785c;
-	color: #0d606f;
+	box-shadow: none;
+	opacity: 0.6;
 }
 
-.header__preview {
-	margin-top: 31px;
-}
+/*=====================================================END HEADER*/
 
-.main-title {
-	margin: 0;
-	font-size: 80px;
-	line-height: 96px;
+/*=====================================================MAIN*/
+/*==============================================prewiew*/
+.main__preview {
+	min-height: 690px;
+	padding-top: 32px;
+
+	font-family: 'Aleo';
+	font-weight: 700;
+	color: #ffffff;
+
+	background: url('../assets/preview/garrett.jpg') center -90px no-repeat;
 }
 
 .preview__title {
-	margin-bottom: 31px;
-}
-
-.main-description {
-	font-style: italic;
-	font-size: 20px;
-	line-height: 24px;
+	margin: 0 0 31px 0;
 }
 
 .preview__description {
-	margin-bottom: 49px;
+	margin-bottom: 48px;
 }
 
-.header__row {
+.form__row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 
 	max-width: 848px;
-	padding: 18px 22px;
+	padding: 0 22px;
 
 	overflow: hidden;
 	background: rgba(255, 255, 255, 0.7);
 	border-radius: 16px;
 }
 
-.header__input {
-	height: 100%;
+.form__input {
+	height: 94px;
 	width: 560px;
 	padding: 0 0 0 20px;
 
@@ -225,11 +229,20 @@ li {
 	outline: none;
 }
 
-.header__input::placeholder {
+.form__input::placeholder {
 	color: #f2785c;
 }
 
-.header__button {
+.form__input:hover {
+	cursor: pointer;
+}
+
+.form__input:focus::placeholder {
+	color: #000000;
+	opacity: 0.4;
+}
+
+.form__button {
 	margin-left: 41px;
 	padding: 13px 30px;
 
@@ -248,15 +261,14 @@ li {
 	transition: 1s;
 }
 
-.header__button:hover {
+.form__button:hover {
 	cursor: pointer;
-	background: inherit;
-	color: #f2785c;
+	box-shadow: none;
+	opacity: 0.6;
 }
 
-/*=====================================================END HEADER*/
+/*==============================================end prewiew*/
 
-/*=====================================================MAIN*/
 /*==============================================steps*/
 .main__steps {
 	margin-bottom: 68px;
@@ -290,8 +302,14 @@ li {
 .steps__icon {
 	display: block;
 	margin: 0 auto 27px auto;
+
+	transition: 2s;
 }
 
+.steps__icon:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
 
 .steps__item {
 	text-align: center;
@@ -341,11 +359,11 @@ li {
 	width: 800px;
 	height: 800px;
 	object-fit: cover;
-	transition: 1s;
+	transition: 2s;
 }
 
 .destinations__image:hover {
-	opacity: 0.9;
+	transform: scale(1.1);
 	cursor: pointer;
 }
 
@@ -406,25 +424,29 @@ li {
 /*==============================================end destinations*/
 
 /*==============================================stories*/
-.main__stories {
-	padding-bottom: 42px;
-}
+.main__stories {}
 
 .stories {
 	color: #0d606f;
-	background: rgba(255, 255, 255, 0.7);
 }
 
 .stories__title-block {
-	margin-bottom: 66px;
+	margin-bottom: 34px;
 }
 
 .stories__title {
-	text-align: center;
+	position: relative;
+	z-index: 99;
+
 	margin: 0;
+
+	text-align: center;
 }
 
 .stories__column {
+	position: relative;
+	z-index: 99;
+
 	margin-bottom: 24px;
 }
 
@@ -446,6 +468,13 @@ li {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+
+	transition: 2s;
+}
+
+.stories__image:hover {
+	transform: scale(1.2);
+	cursor: pointer;
 }
 
 .stories__text-block {
@@ -479,8 +508,32 @@ li {
 }
 
 .stories__button {
+	position: relative;
+	z-index: 99;
+
 	width: 219px;
 	margin: 0 auto;
+}
+
+.stories-background {
+	position: relative;
+
+	padding: 32px 0 42px 0;
+
+	background: url('../assets/stories/background.jpg') center 7px no-repeat;
+}
+
+.stories-background::before {
+	content: '';
+
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background: rgba(255, 255, 255, 0.7);
 }
 
 /*==============================================end stories*/
@@ -493,6 +546,8 @@ li {
 	font-size: 16px;
 	line-height: 21px;
 	color: #ffffff;
+
+	background: url('../assets/stories/background.jpg') center bottom no-repeat;
 }
 
 .info__link,
@@ -524,9 +579,6 @@ li {
 	align-items: center;
 	margin: 0 -8px;
 }
-
-.footer__item {}
-
 
 .info__img {
 	width: 34px;
