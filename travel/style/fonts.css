@@ -1,0 +1,11 @@
+@font-face {
+	font-family: 'SF Pro';
+	src: url('../fonts/SFProSemibold.eot');
+	src: local('../fonts/SFProSemibold'), local('../fonts/SFProSemibold'),
+		url('../fonts/SFProSemibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SFProSemibold.woff2') format('woff2'),
+		url('../fonts/SFProSemibold.woff') format('woff'),
+		url('../fonts/SFProSemibold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
