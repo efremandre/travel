@@ -1,0 +1,608 @@
+/*GLOBAL*/
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	font-family: 'Aleo', serif;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+	width: 1440px;
+
+	height: 100%;
+	margin: 0 auto;
+
+	overflow: hidden;
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.main-title {
+	font-size: 80px;
+	line-height: 96px;
+}
+
+.title {
+	font-family: 'Red Hat Text';
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 53px;
+	text-transform: uppercase;
+	color: #f2785c;
+}
+
+.link {
+	display: inline-block;
+	position: relative;
+	padding: 13px 31px 13px 81px;
+
+	font-family: 'Red Hat Text';
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 32px;
+	text-decoration: none;
+	color: #ffffff;
+
+	background: #0d606f;
+	box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+	border-radius: 10px;
+
+	transition: 1s;
+}
+
+.link:hover {
+	opacity: 0.7;
+}
+
+.link::before {
+	content: " ";
+	position: absolute;
+	top: 18px;
+	left: 33px;
+	width: 35px;
+	height: 22px;
+	background: url('../assets/arrow.svg') no-repeat;
+}
+
+.main-description {
+	font-style: italic;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+/*=====================================================HEADER*/
+.header {
+	background: url('../assets/preview/garrett.jpg') center top no-repeat;
+}
+
+.header__menu-background {
+	position: relative;
+	z-index: 99;
+	background: rgba(242, 120, 92, 0.7);
+	box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+}
+
+.menu {
+	display: flex;
+
+	align-items: center;
+	min-height: 90px;
+}
+
+.logo {
+	flex: 0 1 353px;
+}
+
+.logo__image {
+	margin-right: 7px;
+}
+
+.logo__name {
+	font-family: 'Magra';
+	font-size: 32px;
+	line-height: 40px;
+	color: #ffffff;
+}
+
+.navigation__list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navigation__link,
+.button-login__link {
+	display: inline-block;
+	padding: 21px;
+
+	font-family: 'Red Hat Text', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 21px;
+
+	color: #ffffff;
+	text-decoration: none;
+
+	transition: 1s;
+}
+
+.navigation__link:hover {
+	text-decoration: underline;
+	color: #0d606f;
+}
+
+.button-login {
+	display: flex;
+	justify-content: right;
+	flex: 0 1 280px;
+}
+
+.button-login__link {
+	display: inline-block;
+	padding: 10px 30px;
+
+	text-align: right;
+
+	background: #0d606f;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+	border-radius: 10px;
+
+	transition: 0.7s;
+}
+
+.button-login__link:hover {
+	box-shadow: none;
+	opacity: 0.6;
+}
+
+/*=====================================================END HEADER*/
+
+/*=====================================================MAIN*/
+/*==============================================prewiew*/
+.main__preview {
+	min-height: 690px;
+	padding-top: 32px;
+
+	font-family: 'Aleo';
+	font-weight: 700;
+	color: #ffffff;
+
+	background: url('../assets/preview/garrett.jpg') center -90px no-repeat;
+}
+
+.preview__title {
+	margin: 0 0 31px 0;
+}
+
+.preview__description {
+	margin-bottom: 48px;
+}
+
+.form__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	max-width: 848px;
+	padding: 0 22px;
+
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.7);
+	border-radius: 16px;
+}
+
+.form__input {
+	height: 94px;
+	width: 560px;
+	padding: 0 0 0 20px;
+
+	font-style: italic;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 29px;
+	color: #f2785c;
+
+	box-sizing: border-box;
+	border: none;
+	background: none;
+	outline: none;
+}
+
+.form__input::placeholder {
+	color: #f2785c;
+}
+
+.form__input:hover {
+	cursor: pointer;
+}
+
+.form__input:focus::placeholder {
+	color: #000000;
+	opacity: 0.4;
+}
+
+.form__button {
+	margin-left: 41px;
+	padding: 13px 30px;
+
+	font-family: 'Red Hat Text';
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 32px;
+	text-decoration: none;
+	color: #ffffff;
+
+	border: none;
+	border-radius: 10px;
+	background: #0d606f;
+	box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+
+	transition: 1s;
+}
+
+.form__button:hover {
+	cursor: pointer;
+	box-shadow: none;
+	opacity: 0.6;
+}
+
+/*==============================================end prewiew*/
+
+/*==============================================steps*/
+.main__steps {
+	margin-bottom: 68px;
+}
+
+.steps__title-block {
+	margin-bottom: 33px;
+}
+
+.steps__title {
+	text-align: center;
+}
+
+.steps__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.steps__column {
+	padding: 10px;
+}
+
+.steps__column:nth-child(2) {
+	position: absolute;
+	top: 0;
+	left: 40%;
+}
+
+.steps__icon {
+	display: block;
+	margin: 0 auto 27px auto;
+
+	transition: 2s;
+}
+
+.steps__icon:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+}
+
+.steps__item {
+	text-align: center;
+	font-size: 20px;
+	line-height: 24px;
+	color: #0d606f;
+}
+
+/*==============================================end steps*/
+
+/*==============================================destinations*/
+.main__destinations {
+	margin-bottom: 80px;
+}
+
+.destinations__title-block {
+	text-align: center;
+	margin-bottom: 46px;
+	overflow: hidden;
+}
+
+.destinations__title {
+	margin: 0;
+}
+
+.destinations__row {
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+
+	margin: 0 -570px 23px -570px;
+}
+
+.destinations__column {
+	width: 800px;
+	height: 800px;
+	margin: 0 30px;
+	position: relative;
+
+	border-radius: 16px;
+
+	overflow: hidden;
+}
+
+.destinations__image {
+	display: block;
+	width: 800px;
+	height: 800px;
+	object-fit: cover;
+	transition: 2s;
+}
+
+.destinations__image:hover {
+	transform: scale(1.1);
+	cursor: pointer;
+}
+
+.destinations__item {
+	display: inline-block;
+	position: absolute;
+	bottom: 41px;
+	left: 16px;
+	font-family: 'Red Hat Text';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 42px;
+	text-transform: uppercase;
+
+	color: #ffffff;
+}
+
+.destinations__circle-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 91px;
+
+	margin: 0 auto 40px auto;
+}
+
+.destinations__circle {
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+
+	background: #f2785c;
+	border-radius: 50%;
+
+	transition: 1s;
+}
+
+.destinations__circle:hover {
+	cursor: pointer;
+	background: rgba(242, 120, 92, 0.5);
+}
+
+.circle-opacity {
+	background: rgba(242, 120, 92, 0.5);
+	transition: 1s;
+}
+
+.circle-opacity:hover {
+	background: #f2785c;
+}
+
+.destinations__button {
+	width: 226px;
+	margin: 0 auto 80px auto;
+}
+
+/*==============================================end destinations*/
+
+/*==============================================stories*/
+.main__stories {}
+
+.stories {
+	color: #0d606f;
+}
+
+.stories__title-block {
+	margin-bottom: 34px;
+}
+
+.stories__title {
+	position: relative;
+	z-index: 99;
+
+	margin: 0;
+
+	text-align: center;
+}
+
+.stories__column {
+	position: relative;
+	z-index: 99;
+
+	margin-bottom: 24px;
+}
+
+.stories__item {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0;
+}
+
+.stories__image-block {
+	flex: 1 0 400px;
+	height: 250px;
+	box-shadow: 0px 4px 10px #0d606f;
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.stories__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+	transition: 2s;
+}
+
+.stories__image:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.stories__text-block {
+	flex: 1 1 auto;
+	padding: 0 6px 0 40px;
+}
+
+.stories__subtitle {
+	margin: 0 0 23px 0;
+	font-size: 35px;
+	line-height: 42px;
+}
+
+.stories__text {
+	margin: 0;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.stories__text-link {
+	font-weight: 600;
+	font-size: 20px;
+	color: #0d606f;
+
+	transition: 1s;
+}
+
+.stories__text-link:hover {
+	color: #f2785c;
+	text-decoration: none;
+}
+
+.stories__button {
+	position: relative;
+	z-index: 99;
+
+	width: 219px;
+	margin: 0 auto;
+}
+
+.stories-background {
+	position: relative;
+
+	padding: 32px 0 42px 0;
+
+	background: url('../assets/stories/background.jpg') center 7px no-repeat;
+}
+
+.stories-background::before {
+	content: '';
+
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background: rgba(255, 255, 255, 0.7);
+}
+
+/*==============================================end stories*/
+
+/*=====================================================END MAIN*/
+
+/*=====================================================FOOTER*/
+.footer {
+	font-family: 'Red Hat Text';
+	font-size: 16px;
+	line-height: 21px;
+	color: #ffffff;
+
+	background: url('../assets/stories/background.jpg') center bottom no-repeat;
+}
+
+.info__link,
+.social__link {
+	display: inline-block;
+	padding: 11px 9px;
+
+	transition: 1s;
+}
+
+.info__link:hover,
+.social__link:hover {
+	position: relative;
+	bottom: 1px;
+}
+
+.footer__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.info {
+	width: 33.33%;
+}
+
+.info__list {
+	display: flex;
+	align-items: center;
+	margin: 0 -8px;
+}
+
+.info__img {
+	width: 34px;
+	height: 34px;
+}
+
+.info__img-big {
+	width: 70px;
+	height: 30px;
+}
+
+.footer__text {
+	width: 33.33%;
+	text-align: center;
+}
+
+.social {
+	width: 33.33%;
+}
+
+.social__list {
+	display: flex;
+	justify-content: right;
+	margin: 0 -8px;
+}
+
+/*=====================================================END FOOTER*/
