@@ -25,7 +25,7 @@ li {
 	flex-direction: column;
 	justify-content: space-between;
 	position: relative;
-	width: 1440px;
+	max-width: 1440px;
 
 	height: 100%;
 	margin: 0 auto;
@@ -34,7 +34,7 @@ li {
 }
 
 .container {
-	width: 1200px;
+	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 10px;
 }
@@ -112,7 +112,7 @@ li {
 }
 
 .logo {
-	flex: 0 1 353px;
+	flex: 1 1 353px;
 }
 
 .logo__image {
@@ -124,6 +124,10 @@ li {
 	font-size: 32px;
 	line-height: 40px;
 	color: #ffffff;
+}
+
+.header__navigation {
+	flex: 0 0 auto;
 }
 
 .navigation__list {
@@ -155,7 +159,7 @@ li {
 .button-login {
 	display: flex;
 	justify-content: right;
-	flex: 0 1 280px;
+	flex: 1 1 280px;
 }
 
 .button-login__link {
