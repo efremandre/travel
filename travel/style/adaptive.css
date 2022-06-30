@@ -21,6 +21,12 @@
 /*******************************max-width: 851px*/
 @media (max-width: 851px) {
 
+	/*HOVERS*/
+	.navigation__link:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+
 	.logo {
 		flex: 1 0 140px
 	}
@@ -102,9 +108,19 @@
 /*******************************max-width: 391px*/
 @media (max-width: 391px) {
 
+	.burger {}
+
+	.header__burger {
+		display: block;
+	}
+
+	.header {
+		background: url('../assets/preview/garrett-mobile.jpg') center top no-repeat;
+	}
+
+
 	.menu {
-		min-height: 75px;
-		padding: 5px 0;
+		padding: 45px 0 11px 0;
 	}
 
 	.container {
@@ -117,11 +133,37 @@
 		box-shadow: none;
 	}
 
+	.logo__image {
+		width: 30px;
+	}
+
 	.header__navigation {
 		display: none;
 	}
 
 	.button-login {
+		display: none;
+	}
+}
+
+/*****************************************PREVIEW*/
+
+@media (max-width: 391px) {
+
+	.main {
+		display: none;
+	}
+
+	.footer {
+		display: none;
+	}
+
+	.main__preview {
+		background: url('../assets/preview/garrett-mobile.jpg') center -90px no-repeat;
+	}
+
+	.preview__title,
+	.preview__description {
 		display: none;
 	}
 }

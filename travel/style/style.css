@@ -105,6 +105,52 @@ li {
 	box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
+.header__burger {
+	display: none;
+}
+
+.burger {
+	padding: 0 8px;
+}
+
+.burger__row {
+	width: 27px;
+	height: 16px;
+
+	position: relative;
+	top: 3px;
+	left: 0;
+	box-sizing: border-box;
+}
+
+.burger__centre-dash {
+	display: block;
+	width: 100%;
+	height: 3px;
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+.burger__row::before,
+.burger__row::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 3px;
+
+	border-radius: 10px;
+	background: #ffffff;
+}
+
+.burger__row::before {
+	top: 7px;
+}
+
+.burger__row::after {
+	bottom: 19px;
+}
+
 .menu {
 	display: flex;
 	justify-content: space-between;
