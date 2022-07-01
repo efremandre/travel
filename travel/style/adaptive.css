@@ -14,7 +14,7 @@
 	}
 
 	.button-login {
-		flex: 1 0 102px;
+		flex: 1 0 auto;
 	}
 }
 
@@ -55,7 +55,6 @@
 	}
 
 	.button-login__link {
-		padding: 10px 17px;
 		font-size: 14px;
 	}
 }
@@ -73,6 +72,15 @@
 
 	.logo__name {
 		display: none;
+	}
+
+	.navigation__link {
+		font-size: 13px;
+	}
+
+	.button-login__link {
+		width: 85px;
+		height: 38px;
 	}
 }
 
@@ -94,10 +102,8 @@
 	}
 
 	.button-login__link {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 10px;
+		height: 26px;
+		width: 64px;
 	}
 
 	.logo__image {
@@ -107,6 +113,32 @@
 
 /*******************************max-width: 391px*/
 @media (max-width: 391px) {
+
+	.title {
+		margin: 0;
+		font-size: 14px;
+		line-height: 19px;
+	}
+
+	.link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 92px;
+		height: 30px;
+		padding: 0 0 0 10px;
+
+		font-size: 11px;
+		line-height: 15px;
+	}
+
+	.link::before {
+		top: 12px;
+		left: 13px;
+		width: 10px;
+		height: 10px;
+		background: url('../assets/arrow-mobile.svg') no-repeat;
+	}
 
 	.burger {}
 
@@ -197,7 +229,6 @@
 
 @media (max-width: 391px) {
 
-
 	.main__preview {
 		padding-top: 52px;
 		background: url('../assets/preview/garrett-mobile.jpg') center -91px no-repeat;
@@ -209,7 +240,7 @@
 	}
 
 	.main__preview {
-		min-height: 172px;
+		min-height: 108px;
 	}
 
 	.form__row {
@@ -238,5 +269,82 @@
 
 		font-size: 11px;
 		line-height: 15px;
+	}
+
+
+
+	.destinations__button,
+	.stories__button {
+		width: 100%;
+	}
+
+	.destinations__link,
+	.stories__link {
+		margin: 0 auto;
+	}
+}
+
+
+/*****************************************STEPS*/
+@media (max-width: 391px) {
+
+	.main__steps {
+		margin-bottom: 9px;
+	}
+
+	.steps__title-block {
+		margin: 0;
+	}
+
+	.steps__title {
+		margin: 20px 0 12px 0;
+	}
+
+	.steps__row {
+		margin: 0 -37px;
+	}
+
+	.steps__column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		padding: 8px 10px 10px;
+		flex: 1 1 90px;
+	}
+
+	.steps__text {}
+
+	.steps__text_left {
+		max-width: 76px;
+		margin: 0 auto;
+
+	}
+
+	.steps__text_left p {
+		text-align: left;
+	}
+
+	.steps__icon {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 20px;
+		background: #F2785C;
+		border-radius: 16px;
+	}
+
+	.steps__icon_center {
+		margin-top: -11px;
+	}
+
+	.steps__box-image {
+		max-width: 35px;
+	}
+
+	.steps__item {
+		margin: 0;
+		font-size: 10px;
+		line-height: 12px;
+		color: #0D606F;
 	}
 }
