@@ -124,7 +124,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		max-width: 92px;
+		max-width: 83px;
 		height: 30px;
 		padding: 0 0 0 10px;
 
@@ -144,6 +144,12 @@
 
 	.header__burger {
 		display: block;
+
+		transition: 1s;
+	}
+
+	.header__burger:hover {
+		opacity: 0;
 	}
 
 	.header {
@@ -156,8 +162,17 @@
 
 	.header__navigation {
 		position: fixed;
+		z-index: 100;
 		top: 0;
 		right: -250px;
+
+		overflow: hidden;
+
+		transition: 0.7s;
+	}
+
+	.header__navigation.active-menu {
+		right: 0;
 	}
 
 	.navigation {
@@ -185,15 +200,26 @@
 		display: block;
 		position: absolute;
 		z-index: 99;
-		top: -23px;
-		left: -16px;
+		top: -30px;
+		left: -23px;
 		width: 30px;
 		height: 30px;
 
-		background: url('../assets/header/close.svg') no-repeat;
+		opacity: 0;
+		transition: 4s;
 	}
 
-	.navigation__item {}
+	.navigation__close.active-close {
+		opacity: 1;
+	}
+
+	.navigation__btn {
+		width: 100%;
+		height: 100%;
+
+		border: none;
+		background: url('../assets/header/close.svg') center center no-repeat;
+	}
 
 	.navigation__item-account,
 	.navigation__item-social {
@@ -347,4 +373,99 @@
 		line-height: 12px;
 		color: #0D606F;
 	}
+}
+
+/***************************************************STORIES*/
+
+@media (max-width: 391px) {
+
+	.stories__title-block {
+		margin-bottom: 0;
+	}
+
+	.stories__column {
+		margin-bottom: 2px;
+	}
+
+	.stories__item {
+		padding: 8px 0;
+	}
+
+	.stories__image-block {
+		flex: 1 0 155px;
+		height: 129px;
+
+		box-shadow: 0px 4px 5px #0d606f;
+	}
+
+	.stories__subtitle {
+		margin: 0 0 5px 0;
+		font-size: 11px;
+		line-height: 23px;
+	}
+
+	.stories__text-block {
+		padding: 0 6px 0 10px;
+	}
+
+	.stories__text {
+		display: none;
+	}
+
+	.stories__text-mobile {
+		display: block;
+		margin: 0;
+		font-family: 'Aleo';
+		font-weight: 400;
+		font-size: 9px;
+		line-height: 11px;
+	}
+
+	.stories__text-link {
+		font-size: 9px;
+	}
+
+	.stories-background {
+		padding: 10px 0 15px 0;
+		background: url('../assets/stories/background-mobile.jpg') center 7px no-repeat;
+	}
+}
+
+/*****************************************************************************FOOTER*/
+@media (max-width: 391px) {
+
+	.footer {}
+
+	.container {}
+
+	.footer__row {}
+
+	.footer__info {}
+
+	.info {}
+
+	.info__list {}
+
+	.info__item {}
+
+	.info__link {}
+
+	.info__img {}
+
+	.info__img-big {}
+
+	.div {}
+
+	.footer__text {}
+
+	.footer__social {}
+
+	.social {}
+
+	.social__list {}
+
+	.social__item {}
+
+	.social__link {}
+
 }
