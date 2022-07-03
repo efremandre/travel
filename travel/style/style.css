@@ -305,12 +305,16 @@ li {
 	background: url('../assets/preview/garrett.jpg') center -90px no-repeat;
 }
 
+.preview__item {
+	max-width: 780px;
+}
+
 .preview__title {
 	margin: 0 0 31px 0;
 }
 
 .preview__description {
-	margin-bottom: 48px;
+	margin-bottom: 46px;
 }
 
 .form__row {
@@ -359,8 +363,12 @@ li {
 }
 
 .form__button {
-	margin-left: 41px;
-	padding: 13px 30px;
+	padding: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 224px;
+	height: 60px;
 
 	font-family: 'Red Hat Text';
 	font-weight: 500;

@@ -18,6 +18,12 @@
 	}
 }
 
+@media (max-width: 830px) {
+	.title {
+		font-size: 20px;
+	}
+}
+
 /*******************************max-width: 851px*/
 @media (max-width: 851px) {
 
@@ -252,308 +258,359 @@
 }
 
 /*****************************************PREVIEW*/
-
-@media (max-width: 391px) {
-
+@media (max-width: 830px) {
 	.main__preview {
-		padding-top: 52px;
-		background: url('../assets/preview/garrett-mobile.jpg') center -91px no-repeat;
+		min-height: 380px;
 	}
 
-	.preview__title,
+	.main-title {
+		font-size: 60px;
+		line-height: 70px;
+	}
+
+	.preview__title {
+		margin: 0;
+	}
+
 	.preview__description {
-		display: none;
+		margin-bottom: 27px;
 	}
 
-	.main__preview {
-		min-height: 108px;
-	}
-
-	.form__row {
-		padding: 5px 8px;
-	}
-
-	.form__input {
-		height: 37px;
-		width: 259px;
-		padding: 0 0 0 9px;
-
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 17px;
-	}
-
-	.form__button {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 94px;
-		height: 29px;
-		margin: 0;
-		padding: 0;
-		/* padding: 9px 7px; */
-
-		font-size: 11px;
-		line-height: 15px;
-	}
-
-
-
-	.destinations__button,
-	.stories__button {
-		width: 100%;
-	}
-
-	.destinations__link,
-	.stories__link {
-		margin: 0 auto;
-	}
-}
-
-
-/*****************************************STEPS*/
-@media (max-width: 391px) {
-
-	.main__steps {
-		margin-bottom: 9px;
-	}
-
-	.steps__title-block {
-		margin: 0;
-	}
-
-	.steps__title {
-		margin: 20px 0 12px 0;
-	}
-
-	.steps__row {
-		margin: 0 -37px;
-	}
-
-	.steps__column {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-
-		padding: 8px 10px 10px;
-		flex: 1 1 90px;
-	}
-
-	.steps__text {}
-
-	.steps__text_left {
-		max-width: 76px;
-		margin: 0 auto;
-
-	}
-
-	.steps__text_left p {
-		text-align: left;
-	}
-
-	.steps__icon {
-		width: 70px;
-		height: 70px;
-		margin-bottom: 20px;
-		background: #F2785C;
-		border-radius: 16px;
-	}
-
-	.steps__icon_center {
-		margin-top: -11px;
-	}
-
-	.steps__box-image {
-		max-width: 35px;
-	}
-
-	.steps__item {
-		margin: 0;
-		font-size: 10px;
-		line-height: 12px;
-		color: #0D606F;
-	}
-}
-
-/***************************************************STORIES*/
-
-@media (max-width: 1001px) {
-	.stories__subtitle {
-		margin: 0 0 5px 0;
-		font-size: 25px;
-		line-height: 35px;
-	}
-
-	.stories__image-block {
-		flex: 1 0 300px;
-	}
-
-	.stories__text-block {
-		padding: 0 6px 0 15px;
-	}
-
-	.stories__text {
+	.main-description {
 		font-size: 17px;
-		line-height: 23px;
 	}
 
-	.stories__text-link {
-		font-size: 17px;
-		line-height: 23px;
-	}
-}
+	@media (max-width: 630px) {
 
-@media (max-width: 760px) {
+		.main-title {
+			font-size: 30px;
+			line-height: 45px;
+		}
 
-	.stories__subtitle {
-		margin: 0 0 5px 0;
-		font-size: 22px;
-		line-height: 32px;
-	}
+		.main-description {
+			font-size: 10px;
+		}
 
-	.stories__image-block {
-		flex: 1 0 300px;
-	}
+		.form__row {
+			margin: 0 15px;
+		}
 
-	.stories__text {
-		font-size: 14px;
-		line-height: 20px;
-	}
-}
+		.form__button {
+			min-width: 120px;
+			height: 35px;
+			font-size: 12px;
+			line-height: 20px;
+		}
 
-@media (max-width: 700px) {
-
-	.stories__item {
-		flex-direction: column;
-	}
-
-	.stories__image-block {
-		margin-bottom: 15px;
-	}
-}
-
-@media (max-width: 391px) {
-
-	.stories__title-block {
-		margin-bottom: 0;
+		.form__input {
+			height: 60px;
+			padding: 0;
+			font-size: 10px;
+			line-height: 26px;
+		}
 	}
 
-	.stories__column {
-		margin-bottom: 2px;
+	@media (max-width: 391px) {
+
+		.main__preview {
+			padding-top: 52px;
+			background: url('../assets/preview/garrett-mobile.jpg') center -91px no-repeat;
+		}
+
+		.preview__title,
+		.preview__description {
+			display: none;
+		}
+
+		.main__preview {
+			min-height: 108px;
+		}
+
+		.form__row {
+			padding: 5px 8px;
+		}
+
+		.form__input {
+			height: 37px;
+			width: 259px;
+			padding: 0 0 0 9px;
+
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 17px;
+		}
+
+		.form__button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 94px;
+			height: 29px;
+			margin: 0;
+			padding: 0;
+			/* padding: 9px 7px; */
+
+			font-size: 11px;
+			line-height: 15px;
+		}
+
+
+
+		.destinations__button,
+		.stories__button {
+			width: 100%;
+		}
+
+		.destinations__link,
+		.stories__link {
+			margin: 0 auto;
+		}
 	}
 
-	.stories__item {
-		flex-direction: row;
-		padding: 8px 0;
+
+	/*****************************************STEPS*/
+	@media (max-width: 391px) {
+
+		.main__steps {
+			margin-bottom: 9px;
+		}
+
+		.steps__title-block {
+			margin: 0;
+		}
+
+		.steps__title {
+			margin: 20px 0 12px 0;
+		}
+
+		.steps__row {
+			margin: 0 -37px;
+		}
+
+		.steps__column {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			padding: 8px 10px 10px;
+			flex: 1 1 90px;
+		}
+
+		.steps__text {}
+
+		.steps__text_left {
+			max-width: 76px;
+			margin: 0 auto;
+
+		}
+
+		.steps__text_left p {
+			text-align: left;
+		}
+
+		.steps__icon {
+			width: 70px;
+			height: 70px;
+			margin-bottom: 20px;
+			background: #F2785C;
+			border-radius: 16px;
+		}
+
+		.steps__icon_center {
+			margin-top: -11px;
+		}
+
+		.steps__box-image {
+			max-width: 35px;
+		}
+
+		.steps__item {
+			margin: 0;
+			font-size: 10px;
+			line-height: 12px;
+			color: #0D606F;
+		}
 	}
 
-	.stories__image-block {
-		flex: 1 0 155px;
-		height: 129px;
+	/***************************************************STORIES*/
 
-		box-shadow: 0px 4px 5px #0d606f;
+	@media (max-width: 1001px) {
+		.stories__subtitle {
+			margin: 0 0 5px 0;
+			font-size: 25px;
+			line-height: 35px;
+		}
+
+		.stories__image-block {
+			flex: 1 0 300px;
+		}
+
+		.stories__text-block {
+			padding: 0 6px 0 15px;
+		}
+
+		.stories__text {
+			font-size: 17px;
+			line-height: 23px;
+		}
+
+		.stories__text-link {
+			font-size: 17px;
+			line-height: 23px;
+		}
 	}
 
-	.stories__subtitle {
-		margin: 0 0 5px 0;
-		font-size: 11px;
-		line-height: 23px;
+	@media (max-width: 760px) {
+
+		.stories__subtitle {
+			margin: 0 0 5px 0;
+			font-size: 22px;
+			line-height: 32px;
+		}
+
+		.stories__image-block {
+			flex: 1 0 300px;
+		}
+
+		.stories__text {
+			font-size: 14px;
+			line-height: 20px;
+		}
 	}
 
-	.stories__text-block {
-		padding: 0 5px 0 10px;
+	@media (max-width: 700px) {
+
+		.stories__item {
+			flex-direction: column;
+		}
+
+		.stories__image-block {
+			margin-bottom: 15px;
+		}
 	}
 
-	.stories__text {
-		display: none;
+	@media (max-width: 391px) {
+
+		.stories__title-block {
+			margin-bottom: 0;
+		}
+
+		.stories__column {
+			margin-bottom: 2px;
+		}
+
+		.stories__item {
+			flex-direction: row;
+			padding: 8px 0;
+		}
+
+		.stories__image-block {
+			flex: 1 0 155px;
+			height: 129px;
+
+			box-shadow: 0px 4px 5px #0d606f;
+		}
+
+		.stories__subtitle {
+			margin: 0 0 5px 0;
+			font-size: 11px;
+			line-height: 23px;
+		}
+
+		.stories__text-block {
+			padding: 0 5px 0 10px;
+		}
+
+		.stories__text {
+			display: none;
+		}
+
+		.stories__text-mobile {
+			display: block;
+			margin: 0;
+			font-family: 'Aleo';
+			font-weight: 400;
+			font-size: 9px;
+			line-height: 11px;
+		}
+
+		.stories__text-link {
+			font-size: 9px;
+		}
+
+		.stories-background {
+			padding: 10px 0 15px 0;
+			background: url('../assets/stories/background-mobile.jpg') center 3px / cover no-repeat;
+		}
 	}
 
-	.stories__text-mobile {
-		display: block;
-		margin: 0;
-		font-family: 'Aleo';
-		font-weight: 400;
-		font-size: 9px;
-		line-height: 11px;
+	@media (max-width: 371px) {
+
+		.stories__item {
+			flex-direction: column;
+		}
+
+		.stories__image-block {
+			flex: 1 0 140px;
+			height: 129px;
+		}
+
+		.stories__subtitle {
+			margin: 5px 0 0 0;
+			font-size: 14px;
+			line-height: 26px;
+		}
+
+		.stories__text-mobile {
+			margin: 0 0 5px 0;
+			font-size: 9px;
+			line-height: 11px;
+		}
 	}
 
-	.stories__text-link {
-		font-size: 9px;
+	/*****************************************************************************FOOTER*/
+	@media (max-width: 561px) {
+		.footer__text {
+			display: none;
+		}
 	}
 
-	.stories-background {
-		padding: 10px 0 15px 0;
-		background: url('../assets/stories/background-mobile.jpg') center 3px / cover no-repeat;
+	@media (max-width: 391px) {
+
+		.footer {
+			background: url('../assets/stories/background-mobile.jpg') center bottom / cover no-repeat;
+		}
+
+		.footer__row {
+			display: block;
+		}
+
+		.footer__info {
+			display: none;
+		}
+
+		.info__link {
+			line-height: 0;
+			padding: 15px 9px;
+		}
+
+		.social {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		.social__list {
+			justify-content: center;
+			align-items: center;
+		}
+
+		.info__img-big {
+			width: 30px;
+		}
+
+		.social__link {
+			line-height: 0;
+			padding: 11px 10px;
+		}
 	}
-}
-
-@media (max-width: 371px) {
-
-	.stories__item {
-		flex-direction: column;
-	}
-
-	.stories__image-block {
-		flex: 1 0 140px;
-		height: 129px;
-	}
-
-	.stories__subtitle {
-		margin: 5px 0 0 0;
-		font-size: 14px;
-		line-height: 26px;
-	}
-
-	.stories__text-mobile {
-		margin: 0 0 5px 0;
-		font-size: 9px;
-		line-height: 11px;
-	}
-}
-
-/*****************************************************************************FOOTER*/
-@media (max-width: 561px) {
-	.footer__text {
-		display: none;
-	}
-}
-
-@media (max-width: 391px) {
-
-	.footer {
-		background: url('../assets/stories/background-mobile.jpg') center bottom / cover no-repeat;
-	}
-
-	.footer__row {
-		display: block;
-	}
-
-	.footer__info {
-		display: none;
-	}
-
-	.info__link {
-		line-height: 0;
-		padding: 15px 9px;
-	}
-
-	.social {
-		display: flex;
-		justify-content: space-between;
-		width: 100%;
-	}
-
-	.social__list {
-		justify-content: center;
-		align-items: center;
-	}
-
-	.info__img-big {
-		width: 30px;
-	}
-
-	.social__link {
-		line-height: 0;
-		padding: 11px 10px;
-	}
-}
