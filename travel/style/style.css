@@ -12,8 +12,11 @@ body {
 	font-family: 'Aleo', serif;
 }
 
-body.noscroll {
-	overflow: hidden;
+
+@media (max-width: 391px) {
+	.scroll-non {
+		overflow: hidden;
+	}
 }
 
 ul {
@@ -38,12 +41,32 @@ li {
 	overflow: hidden;
 }
 
+@media (max-width: 391px) {
+
+	.wrapper-bg {
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+
+		background: #2929296b;
+		transition: 3s;
+	}
+
+	.wrapper-bg.wrapper-bg-visible {
+		display: block;
+	}
+}
+
 .visible {
 	display: block;
 }
 
 .hidden {
 	display: none;
+	transition: 3s;
 }
 
 .container {
@@ -119,12 +142,13 @@ li {
 
 .header__menu-background {
 	position: relative;
-	z-index: 99;
 	background: rgba(242, 120, 92, 0.7);
 	box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
 }
 
-.navigation__close {}
+.navigation__close {
+	display: none;
+}
 
 .header__burger {
 	display: none;
@@ -544,8 +568,6 @@ li {
 /*==============================================end destinations*/
 
 /*==============================================stories*/
-.main__stories {}
-
 .stories {
 	color: #0d606f;
 }
@@ -556,7 +578,7 @@ li {
 
 .stories__title {
 	position: relative;
-	z-index: 99;
+	z-index: 97;
 
 	margin: 0;
 
@@ -565,7 +587,7 @@ li {
 
 .stories__column {
 	position: relative;
-	z-index: 99;
+	z-index: 98;
 
 	margin-bottom: 24px;
 }
@@ -648,7 +670,7 @@ li {
 
 	padding: 32px 0 42px 0;
 
-	background: url('../assets/stories/background.jpg') center / cover 7px no-repeat;
+	background: url('../assets/stories/background.jpg') center 7px / cover no-repeat;
 }
 
 .stories-background::before {
@@ -676,6 +698,12 @@ li {
 	color: #ffffff;
 
 	background: url('../assets/stories/background.jpg') center bottom no-repeat;
+}
+
+@media (min-widrh: 391px) {
+	.info__item-mobile {
+		display: none;
+	}
 }
 
 .info__link,
@@ -734,6 +762,10 @@ li {
 	display: flex;
 	justify-content: right;
 	margin: 0 -8px;
+}
+
+.social__item-mobile {
+	display: none;
 }
 
 /*=====================================================END FOOTER*/

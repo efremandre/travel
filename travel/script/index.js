@@ -6,23 +6,25 @@ console.log("score: 100/100 \n\n[+] 1. Вёрстка валидная +10 \n\n[
 const menuBtn = document.querySelector('.header__burger');
 const burger = document.querySelector('.burger__row')
 const menu = document.querySelector('.header__navigation');
-const body = document.body;
 
 const linkMenu = document.querySelector('.navigation__item');
 const closeBurger = document.querySelector('.navigation__close');
 
-const allPage = document.querySelector('.wrapper');
+const allPageBg = document.querySelector('.wrapper-bg');
+const body = document.body;
 
 menuBtn.addEventListener('click', function () {
 	menu.classList.toggle('active-menu');
 	closeBurger.classList.toggle('active-close');
 	closeBurger.classList.toggle('hidden');
-	body.classList.toggle('noscroll');
+	allPageBg.classList.toggle('wrapper-bg-visible');
+	body.classList.toggle('scroll-non');
 })
 
 closeBurger.addEventListener('click', function () {
 	menu.classList.toggle('active-menu');
 	closeBurger.classList.toggle('hidden');
 	closeBurger.classList.toggle('active-close');
-	body.classList.toggle('noscroll');
+	allPageBg.classList.toggle('wrapper-bg-visible');
+	body.classList.toggle('scroll-non');
 })
