@@ -220,11 +220,36 @@
 		position: relative;
 	}
 
+	.navigation__item-order1 {
+		order: 1;
+	}
+
+	.navigation__item-order2 {
+		order: 3;
+	}
+
+	.navigation__item-order3 {
+		order: 2;
+	}
+
+	.navigation__item-order4 {
+		order: 4;
+	}
+
+	.navigation__item-order5 {
+		order: 5;
+	}
+
+	.navigation__item-order6 {
+		order: 6
+	}
+
+
 	.navigation__close {
 		display: block;
 		position: absolute;
-		top: -30px;
-		left: -23px;
+		top: 8px;
+		left: 8px;
 		width: 30px;
 		height: 30px;
 
