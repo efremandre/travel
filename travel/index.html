@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="./style/fonts.css">
 	<link rel="stylesheet" href="./style/normalize.css">
 	<link rel="stylesheet" href="./style/style.css">
+	<link rel="stylesheet" href="./style/adaptive.css">
 	<title>Travel Portal</title>
 </head>
 
@@ -24,24 +25,42 @@
 				<div class="container">
 					<div class="header__menu menu">
 						<div class="header__logo logo"><img class="logo__image" src="./assets/header/logo.svg"
-								alt="Travel Portal"><span class="logo__name">Travel Portal </span></div>
+								alt="Travel Portal"><span class="logo__name">Travel Portal</span>
+						</div>
 						<nav class="header__navigation navigation">
 							<ul class="navigation__list">
-								<li class="navigation__item">
+								<li class="navigation__item navigation__item-order1">
 									<a href="#" class="navigation__link">How It Works</a>
 								</li>
-								<li class="navigation__item">
+								<li class="navigation__item navigation__item-order2">
 									<a href="#steps" class="navigation__link">Plan Your Trip</a>
 								</li>
-								<li class="navigation__item">
+								<li class="navigation__item navigation__item-order3">
 									<a href="#destinations" class="navigation__link">Destinations</a>
 								</li>
-								<li class="navigation__item">
+								<li class="navigation__item navigation__item-order4">
 									<a href="#stories" class="navigation__link">Travel Stories</a>
 								</li>
+								<li class="navigation__item navigation__item-order5 navigation__item-account">
+									<a href="#" class="navigation__link">Acounts</a>
+								</li>
+								<li class="navigation__item navigation__item-order6 navigation__item-social">
+									<a href="#" class="navigation__link">Social Media</a>
+								</li>
 							</ul>
+							<div class="navigation__close hidden">
+								<button class="navigation__btn"></button>
+							</div>
 						</nav>
-						<div class="header__button-login button-login"><a href="#" class="button-login__link">Login</a></div>
+						<div class="header__burger burger">
+							<div class="burger__row">
+								<span class="burger__centre-dash"></span>
+							</div>
+						</div>
+						<div class="blackout-bg"></div>
+						<div class="header__button-login button-login">
+							<button class="button-login__link">Login</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -67,16 +86,34 @@
 					</div>
 					<div class="steps__row">
 						<div class="steps__column">
-							<img src="./assets/steps/icon-velo.svg" alt="Icon Velo" class="steps__icon">
-							<p class="steps__item">Tell us what you want to do</p>
+							<div class="steps__icon">
+								<div class="steps__box-image">
+									<img class="steps__img" src="./assets/steps/icon-velo.svg" alt="Cyclist">
+								</div>
+							</div>
+							<div class="steps__text steps__text_left">
+								<p class="steps__item">Tell us what you want to do</p>
+							</div>
 						</div>
 						<div class="steps__column">
-							<img src="./assets/steps/icon-calendar.svg" alt="Icon Calendar" class="steps__icon">
-							<p class="steps__item">Share us preferable dates </p>
+							<div class="steps__icon steps__icon_center">
+								<div class="steps__box-image">
+									<img class="steps__img" src="./assets/steps/icon-calendar.svg" alt="Calendar">
+								</div>
+							</div>
+							<div class="steps__text">
+								<p class="steps__item">Share us preferable dates</p>
+							</div>
 						</div>
 						<div class="steps__column">
-							<img src="./assets/steps/icon-airplane.svg" alt="Icon Airplane" class="steps__icon icon-left">
-							<p class="steps__item">We will give you recommendations</p>
+							<div class="steps__icon">
+								<div class="steps__box-image">
+									<img class="steps__img" src="./assets/steps/icon-airplane.svg" alt="Airplane">
+								</div>
+							</div>
+							<div class="steps__text">
+								<p class="steps__item">We will give you recommendations</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -85,18 +122,31 @@
 				<div class="destinations__title-block">
 					<h2 class="destinations__title title">Popular destinations</h2>
 				</div>
-				<div class="destinations__row">
-					<div class="destinations__column"><img src="./assets/destinations/spain.jpg" alt="Spain"
-							class="destinations__image"><span class="destinations__item">Spain</span></div>
-					<div class="destinations__column"><img src="./assets/destinations/japan.jpg" alt="Japan"
-							class="destinations__image"><span class="destinations__item">Japan</span></div>
-					<div class="destinations__column"><img src="./assets/destinations/use.jpg" alt="USA"
-							class="destinations__image"><span class="destinations__item">USA</span></div>
-				</div>
-				<div class="destinations__circle-row">
-					<div class="destinations__circle circle-opacity"></div>
-					<div class="destinations__circle"></div>
-					<div class="destinations__circle circle-opacity"></div>
+				<div class="destinations__slider">
+
+					<div class="destinations__row">
+						<div class="destinations__column order-1"><img src="./assets/destinations/spain.jpg" alt="Spain"
+								class="destinations__image"><span class="destinations__item">Spain</span>
+						</div>
+						<div class="destinations__column order-2"><img src="./assets/destinations/japan.jpg" alt="Japan"
+								class="destinations__image"><span class="destinations__item">Japan</span>
+						</div>
+						<div class="destinations__column order-3"><img src="./assets/destinations/use.jpg" alt="USA"
+								class="destinations__image"><span class="destinations__item">USA</span>
+						</div>
+					</div>
+
+					<div class="destinations__slider-button">
+						<button class="destinations__next"><img src="./assets/destinations/prew.svg" alt="Preview"></button>
+						<button class="destinations__prew"><img src="./assets/destinations/next.svg" alt="Next"></button>
+					</div>
+
+					<div class="destinations__circle-row">
+						<div class="destinations__circle circle-opacity"></div>
+						<div class="destinations__circle"></div>
+						<div class="destinations__circle circle-opacity"></div>
+					</div>
+
 				</div>
 				<div class="destinations__button"><a href="#" class="destinations__link link">Find More</a></div>
 			</section>
@@ -115,15 +165,26 @@
 								</div>
 								<div class="stories__text-block">
 									<h3 class="stories__subtitle">10 Photos of Attractive Thailand</h3>
-									<p class="stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-										tempor
-										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-										ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-										voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit...
+									<p class="stories__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore
+										et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum
+										dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+										officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit...</br>
+										<a href="#" class="stories__text-link" target="_blanck">Read More</a>
 									</p>
-									<a href="#" class="stories__text-link">Read More</a>
+									<p class="stories__text-mobile">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... </br>
+										<a href="#" class="stories__text-link" target="_blanck">Read More</a>
+									</p>
 								</div>
 							</div>
 							<div class="stories__item">
@@ -132,16 +193,25 @@
 								<div class="stories__text-block">
 									<h3 class="stories__subtitle">Canyonlands National Park, Utah</h3>
 									<p class="stories__text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore
 										et
 										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 										cillum
 										dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 										officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
-										elit...
+										elit...</br>
+										<a href="#" class="stories__text-link" target="_blanck">Read More</a>
 									</p>
-									<a href="#" class="stories__text-link">Read More</a>
+									<p class="stories__text-mobile">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... </br>
+										<a href="#" class="stories__text-link" target="_blanck">Read More</a>
+									</p>
 								</div>
 							</div>
 							<div class="stories__item">
@@ -151,16 +221,25 @@
 								<div class="stories__text-block">
 									<h3 class="stories__subtitle">I left my heart in the Mountains!</h3>
 									<p class="stories__text">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore
 										et
 										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 										cillum
 										dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
 										officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
-										elit...
+										elit...</br>
+										<a href="#" class="stories__text-link" target="_blanck">Read More</a>
 									</p>
-									<a href="#" class="stories__text-link">Read More</a>
+									<p class="stories__text-mobile">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... </br>
+										<a href="#" class="stories__text-link" target="_blanck">Read More</a>
+									</p>
 								</div>
 							</div>
 							<div class="stories__item">
@@ -168,15 +247,26 @@
 								</div>
 								<div class="stories__text-block">
 									<h3 class="stories__subtitle">The Longest journey in my life!</h3>
-									<p class="stories__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-										tempor
-										incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-										ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-										voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet,
-										consectetur adipiscing elit...
+									<p class="stories__text">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore
+										et
+										dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum
+										dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+										officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+										elit...</br>
+										<a href="#" class="stories__text-link" target="_blanck">Read More</a>
 									</p>
-									<a href="#" class="stories__text-link">Read More</a>
+									<p class="stories__text-mobile">
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+										labore
+										et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+										aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla.Lorem ipsum dolor sit a... </br>
+										<a href="#" class="stories__text-link" target="_blanck">Read More</a>
+									</p>
 								</div>
 							</div>
 						</div>
@@ -192,8 +282,11 @@
 				<div class="footer__row">
 					<div class="footer__info info">
 						<ul class="info__list">
-							<li class="info__item"><a target="_blank" href="https://github.com/efremandre" class="info__link"><img
-										src="./assets/footer/github.svg" alt=""></a></li>
+							<li class="info__item">
+								<a target="_blank" href="https://github.com/efremandre" class="info__link">
+									<img src="./assets/footer/github.svg" alt="github">
+								</a>
+							</li>
 							<li class="info__item">
 								<a target="_blank" href="https://rs.school/js-stage0/" class="info__link">
 									<img class="info__img info__img-big" src="./assets/footer/rsschool.svg" alt="RSSchool">
@@ -201,27 +294,39 @@
 							</li>
 						</ul>
 					</div>
-					<div class="div footer__text">
+					<div class="footer__text">
 						<p>All Rights Reserved © Travel Portal</p>
 					</div>
 					<div class="footer__social social">
+						<div class="social__item social__item-mobile">
+							<a target="_blank" href="https://github.com/efremandre" class="info__link">
+								<img src="./assets/footer/github.svg" alt="github">
+							</a>
+						</div>
 						<ul class="social__list">
 							<li class="social__item">
-								<a href="https://github.com/efremandre" class="social__link">
+								<a target="_blank" href="https://www.instagram.com/instasamka/?hl=ru" class="social__link">
 									<img src="./assets/footer/instagram.svg" alt="Instagram">
 								</a>
 							</li>
 							<li class="social__item">
-								<a href="https://github.com/efremandre" class="social__link">
+								<a target="_blank" href="https://www.youtube.com/watch?v=f6Tnar7bJY8" class="social__link">
 									<img src="./assets/footer/youtube.svg" alt="Youtube">
 								</a>
 							</li>
 							<li class="social__item">
-								<a href="https://github.com/efremandre" class="social__link">
+								<a target="_blank"
+									href="https://twitter.com/elonmusk?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+									class="social__link">
 									<img src="./assets/footer/twitter.svg" alt="Twitter">
 								</a>
 							</li>
 						</ul>
+						<div class="social__item social__item-mobile">
+							<a target="_blank" href="https://rs.school/js-stage0/" class="info__link">
+								<img class="info__img info__img-big" src="./assets/footer/rs.svg" alt="RSSchool">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
