@@ -23,6 +23,26 @@
 	}
 }
 
+@media (max-width: 391px) {
+	.title {
+		margin: 0;
+		font-size: 14px;
+		line-height: 19px;
+	}
+
+	.link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		max-width: 83px;
+		height: 30px;
+		padding: 0 10px 0 30px;
+
+		font-size: 11px;
+		line-height: 15px;
+	}
+}
+
 /**********************************************************************************HEADER/
 /**********************************************max-width: 961px*/
 @media (max-width: 961px) {
@@ -138,24 +158,6 @@
 
 /**********************************************max-width: 391px*/
 @media (max-width: 391px) {
-
-	.title {
-		margin: 0;
-		font-size: 14px;
-		line-height: 19px;
-	}
-
-	.link {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		max-width: 83px;
-		height: 30px;
-		padding: 0 10px 0 30px;
-
-		font-size: 11px;
-		line-height: 15px;
-	}
 
 	.link::before {
 		display: block;
@@ -573,7 +575,7 @@
 		width: 100%;
 		top: 92px;
 
-		border: 1px solid #000;
+		/* border: 1px solid #000; */
 	}
 
 	.destinations__next,
