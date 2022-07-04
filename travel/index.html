@@ -57,6 +57,7 @@
 								<span class="burger__centre-dash"></span>
 							</div>
 						</div>
+						<div class="blackout-bg"></div>
 						<div class="header__button-login button-login">
 							<button class="button-login__link">Login</button>
 						</div>
@@ -121,18 +122,31 @@
 				<div class="destinations__title-block">
 					<h2 class="destinations__title title">Popular destinations</h2>
 				</div>
-				<div class="destinations__row">
-					<div class="destinations__column"><img src="./assets/destinations/spain.jpg" alt="Spain"
-							class="destinations__image"><span class="destinations__item">Spain</span></div>
-					<div class="destinations__column"><img src="./assets/destinations/japan.jpg" alt="Japan"
-							class="destinations__image"><span class="destinations__item">Japan</span></div>
-					<div class="destinations__column"><img src="./assets/destinations/use.jpg" alt="USA"
-							class="destinations__image"><span class="destinations__item">USA</span></div>
-				</div>
-				<div class="destinations__circle-row">
-					<div class="destinations__circle circle-opacity"></div>
-					<div class="destinations__circle"></div>
-					<div class="destinations__circle circle-opacity"></div>
+				<div class="destinations__slider">
+
+					<div class="destinations__row">
+						<div class="destinations__column order-1"><img src="./assets/destinations/spain.jpg" alt="Spain"
+								class="destinations__image"><span class="destinations__item">Spain</span>
+						</div>
+						<div class="destinations__column order-2"><img src="./assets/destinations/japan.jpg" alt="Japan"
+								class="destinations__image"><span class="destinations__item">Japan</span>
+						</div>
+						<div class="destinations__column order-3"><img src="./assets/destinations/use.jpg" alt="USA"
+								class="destinations__image"><span class="destinations__item">USA</span>
+						</div>
+					</div>
+
+					<div class="destinations__slider-button">
+						<button class="destinations__next"><img src="./assets/destinations/prew.svg" alt="Preview"></button>
+						<button class="destinations__prew"><img src="./assets/destinations/next.svg" alt="Next"></button>
+					</div>
+
+					<div class="destinations__circle-row">
+						<div class="destinations__circle circle-opacity"></div>
+						<div class="destinations__circle"></div>
+						<div class="destinations__circle circle-opacity"></div>
+					</div>
+
 				</div>
 				<div class="destinations__button"><a href="#" class="destinations__link link">Find More</a></div>
 			</section>
@@ -316,7 +330,6 @@
 			</div>
 		</footer>
 	</div>
-	<div class="wrapper-bg"></div>
 
 	<script src="./script/index.js"></script>
 </body>

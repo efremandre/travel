@@ -1,5 +1,30 @@
-/***********************ADAPTIVE HEADER***********************************************/
+/**********************************************************************************GLOBAL*/
+/**********************************************max-width: 851px*/
+@media (max-width: 851px) {
+	.title {
+		font-size: 25px;
+	}
+}
 
+/**********************************************max-width: 461px*/
+@media (max-width: 461px) {
+
+	.title {
+		font-size: 16px;
+	}
+
+	.link {
+		padding: 10px 20px;
+		font-size: 16px;
+	}
+
+	.link::before {
+		display: none;
+	}
+}
+
+/**********************************************************************************HEADER/
+/**********************************************max-width: 961px*/
 @media (max-width: 961px) {
 	.logo {
 		flex: 1 0 207px;
@@ -18,12 +43,8 @@
 	}
 }
 
-/*******************************max-width: 851px*/
+/**********************************************max-width: 851px*/
 @media (max-width: 851px) {
-
-	.title {
-		font-size: 25px;
-	}
 
 	/*HOVERS*/
 	.navigation__link:hover {
@@ -63,7 +84,7 @@
 	}
 }
 
-/*******************************max-width: 701px*/
+/**********************************************max-width: 701px*/
 @media (max-width: 701px) {
 
 	.logo {
@@ -88,7 +109,7 @@
 	}
 }
 
-/*******************************max-width: 561px*/
+/**********************************************max-width: 561px*/
 @media (max-width: 561px) {
 
 	.menu {
@@ -115,31 +136,7 @@
 	}
 }
 
-/*******************************max-width: 451px*/
-@media (max-width: 461px) {
-
-	.steps__title-block {
-		margin-bottom: 0;
-	}
-
-	.title {
-		font-size: 16px;
-	}
-}
-
-/*******************************max-width: 391px*/
-@media (max-width: 461px) {
-	.link {
-		padding: 10px 20px;
-		font-size: 16px;
-	}
-
-	.link::before {
-		display: none;
-	}
-}
-
-
+/**********************************************max-width: 391px*/
 @media (max-width: 391px) {
 
 	.title {
@@ -154,13 +151,14 @@
 		align-items: center;
 		max-width: 83px;
 		height: 30px;
-		padding: 0 0 0 10px;
+		padding: 0 10px 0 30px;
 
 		font-size: 11px;
 		line-height: 15px;
 	}
 
 	.link::before {
+		display: block;
 		top: 12px;
 		left: 13px;
 		width: 10px;
@@ -225,7 +223,6 @@
 	.navigation__close {
 		display: block;
 		position: absolute;
-		z-index: 99;
 		top: -30px;
 		left: -23px;
 		width: 30px;
@@ -276,13 +273,15 @@
 	}
 }
 
-/*****************************************PREVIEW*/
+/**********************************************************************************PREVIEW*/
+/**********************************************max-width: 861px*/
 @media (max-width: 861px) {
 	.main__preview {
 		min-height: 645px;
 	}
 }
 
+/**********************************************max-width: 831px*/
 @media (max-width: 831px) {
 	.main__preview {
 		min-height: 380px;
@@ -304,385 +303,488 @@
 	.main-description {
 		font-size: 17px;
 	}
+}
 
-	@media (max-width: 630px) {
+/**********************************************max-width: 631px*/
+@media (max-width: 631px) {
 
-		.main-title {
-			font-size: 30px;
-			line-height: 45px;
-		}
-
-		.main-description {
-			font-size: 10px;
-		}
-
-		.form__row {
-			padding: 0 15px;
-		}
-
-		.form__button {
-			min-width: 120px;
-			height: 35px;
-			font-size: 12px;
-			line-height: 20px;
-		}
-
-		.form__input {
-			height: 60px;
-			padding: 0;
-			font-size: 10px;
-			line-height: 26px;
-		}
+	.main-title {
+		font-size: 30px;
+		line-height: 45px;
 	}
 
-	@media (max-width: 391px) {
-
-		.main__preview {
-			padding-top: 52px;
-			background: url('../assets/preview/garrett-mobile.jpg') center -91px no-repeat;
-		}
-
-		.preview__title,
-		.preview__description {
-			display: none;
-		}
-
-		.main__preview {
-			min-height: 108px;
-		}
-
-		.form__row {
-			padding: 5px 8px;
-		}
-
-		.form__input {
-			height: 37px;
-			width: 259px;
-			padding: 0 0 0 9px;
-
-			font-weight: 400;
-			font-size: 14px;
-			line-height: 17px;
-		}
-
-		.form__button {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 94px;
-			height: 29px;
-			margin: 0;
-			padding: 0;
-			/* padding: 9px 7px; */
-
-			font-size: 11px;
-			line-height: 15px;
-		}
-
-		.destinations__button,
-		.stories__button {
-			width: 100%;
-		}
-
-		.destinations__link,
-		.stories__link {
-			margin: 0 auto;
-		}
+	.main-description {
+		font-size: 10px;
 	}
 
-	/*****************************************STEPS*/
-	@media (max-width: 831px) {
-
-		.main__steps {
-			margin-bottom: 30px;
-		}
-
-		.steps__item {
-			font-size: 15px;
-		}
+	.form__row {
+		padding: 0 15px;
 	}
 
-	@media (max-width: 461px) {
-
-		.main__steps {
-			margin-bottom: 9px;
-		}
-
-		.steps__title-block {
-			margin: 0;
-		}
-
-		.steps__title {
-			margin: 20px 0 12px 0;
-		}
-
-		.steps__row {
-			margin: 0 -37px;
-		}
-
-		.steps__column {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-
-			padding: 8px 10px 10px;
-			flex: 1 1 90px;
-		}
-
-		.steps__text {}
-
-		.steps__text_left {
-			max-width: 76px;
-			margin: 0 auto;
-
-		}
-
-		.steps__text_left p {
-			text-align: left;
-		}
-
-		.steps__icon {
-			width: 70px;
-			height: 70px;
-			margin-bottom: 20px;
-			background: #F2785C;
-			border-radius: 16px;
-		}
-
-		.steps__icon_center {
-			margin-top: -11px;
-		}
-
-		.steps__box-image {
-			max-width: 35px;
-		}
-
-		.steps__item {
-			margin: 0;
-			font-size: 10px;
-			line-height: 12px;
-			color: #0D606F;
-		}
+	.form__button {
+		min-width: 120px;
+		height: 35px;
+		font-size: 12px;
+		line-height: 20px;
 	}
 
-	/***************************************************SLIDER*/
-	@media (max-width: 461px) {
-		.destinations__title-block {
-			margin-bottom: 0;
-		}
+	.form__input {
+		height: 60px;
+		padding: 0;
+		font-size: 10px;
+		line-height: 26px;
+	}
+}
 
-		.main__destinations {
-			margin-bottom: 0;
-		}
+/**********************************************max-width: 391px*/
+@media (max-width: 391px) {
 
-		.destinations__circle-row {
-			margin-bottom: 20px;
-		}
-
-		.destinations__button {
-			display: flex;
-			justify-content: center;
-			margin-bottom: 20px;
-
-		}
+	.main__preview {
+		padding-top: 52px;
+		background: url('../assets/preview/garrett-mobile.jpg') center -91px no-repeat;
 	}
 
-	/***************************************************STORIES*/
-
-	@media (max-width: 1001px) {
-		.stories__subtitle {
-			margin: 0 0 5px 0;
-			font-size: 25px;
-			line-height: 35px;
-		}
-
-		.stories__image-block {
-			flex: 1 0 300px;
-		}
-
-		.stories__text-block {
-			padding: 0 6px 0 15px;
-		}
-
-		.stories__text {
-			font-size: 17px;
-			line-height: 23px;
-		}
-
-		.stories__text-link {
-			font-size: 17px;
-			line-height: 23px;
-		}
+	.preview__title,
+	.preview__description {
+		display: none;
 	}
 
-	@media (max-width: 760px) {
-
-		.stories__subtitle {
-			margin: 0 0 5px 0;
-			font-size: 22px;
-			line-height: 32px;
-		}
-
-		.stories__image-block {
-			flex: 1 0 300px;
-		}
-
-		.stories__text {
-			font-size: 14px;
-			line-height: 20px;
-		}
+	.main__preview {
+		min-height: 108px;
 	}
 
-	@media (max-width: 700px) {
-
-		.stories__item {
-			flex-direction: column;
-		}
-
-		.stories__image-block {
-			margin-bottom: 15px;
-		}
+	.form__row {
+		padding: 5px 8px;
 	}
 
-	@media (max-width: 461px) {
+	.form__input {
+		height: 37px;
+		width: 259px;
+		padding: 0 0 0 9px;
 
-		.stories__title-block {
-			margin-bottom: 0;
-		}
-
-		.stories__button {
-			display: flex;
-			justify-content: center;
-		}
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 17px;
 	}
 
+	.form__button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-width: 88px;
+		height: 29px;
+		margin: 0;
+		padding: 0;
 
-	@media (max-width: 391px) {
-
-		.stories__title-block {
-			margin-bottom: 0;
-		}
-
-		.stories__column {
-			margin-bottom: 2px;
-		}
-
-		.stories__item {
-			flex-direction: row;
-			padding: 8px 0;
-		}
-
-		.stories__image-block {
-			flex: 1 0 155px;
-			height: 129px;
-
-			box-shadow: 0px 4px 5px #0d606f;
-		}
-
-		.stories__subtitle {
-			margin: 0 0 5px 0;
-			font-size: 11px;
-			line-height: 23px;
-		}
-
-		.stories__text-block {
-			padding: 0 5px 0 10px;
-		}
-
-		.stories__text {
-			display: none;
-		}
-
-		.stories__text-mobile {
-			display: block;
-			margin: 0;
-			font-family: 'Aleo';
-			font-weight: 400;
-			font-size: 9px;
-			line-height: 11px;
-		}
-
-		.stories__text-link {
-			font-size: 9px;
-		}
-
-		.stories-background {
-			padding: 10px 0 15px 0;
-			background: url('../assets/stories/background-mobile.jpg') center 3px / cover no-repeat;
-		}
+		font-size: 11px;
+		line-height: 15px;
 	}
 
-	@media (max-width: 371px) {
-
-		.stories__item {
-			flex-direction: column;
-		}
-
-		.stories__image-block {
-			flex: 1 0 140px;
-			height: 129px;
-		}
-
-		.stories__subtitle {
-			margin: 5px 0 0 0;
-			font-size: 14px;
-			line-height: 26px;
-		}
-
-		.stories__text-mobile {
-			margin: 0 0 5px 0;
-			font-size: 9px;
-			line-height: 11px;
-		}
+	.destinations__button,
+	.stories__button {
+		width: 100%;
 	}
 
-	/*****************************************************************************FOOTER*/
-	@media (max-width: 561px) {
-		.footer__text {
-			display: none;
-		}
+	.destinations__link,
+	.stories__link {
+		margin: 0 auto;
+	}
+}
+
+/**********************************************************************************STEPS*/
+/********************************************max-width: 831px*/
+@media (max-width: 831px) {
+
+	.main__steps {
+		margin-bottom: 30px;
 	}
 
-	@media (max-width: 391px) {
-
-		.footer {
-			background: url('../assets/stories/background-mobile.jpg') center bottom / cover no-repeat;
-		}
-
-		.footer__row {
-			display: block;
-		}
-
-		.footer__info {
-			display: none;
-		}
-
-		.info__link {
-			line-height: 0;
-			padding: 15px 9px;
-		}
-
-		.social {
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-		}
-
-		.social__list {
-			justify-content: center;
-			align-items: center;
-		}
-
-		.social__item-mobile {
-			display: block;
-		}
-
-		.info__img-big {
-			width: 30px;
-		}
-
-		.social__link {
-			line-height: 0;
-			padding: 11px 10px;
-		}
+	.steps__item {
+		font-size: 15px;
 	}
+}
+
+/********************************************max-width: 461px*/
+@media (max-width: 461px) {
+
+	.main__steps {
+		margin-bottom: 9px;
+	}
+
+	.steps__title-block {
+		margin-bottom: 0;
+	}
+
+	.steps__title {
+		margin: 20px 0 12px 0;
+	}
+
+	.steps__row {
+		margin: 0 -37px;
+	}
+
+	.steps__column {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		padding: 8px 10px 10px;
+		flex: 1 1 90px;
+	}
+
+	.steps__text_left {
+		max-width: 76px;
+		margin: 0 auto;
+
+	}
+
+	.steps__text_left p {
+		text-align: left;
+	}
+
+	.steps__icon {
+		width: 70px;
+		height: 70px;
+		margin-bottom: 20px;
+		background: #F2785C;
+		border-radius: 16px;
+	}
+
+	.steps__icon_center {
+		margin-top: -11px;
+	}
+
+	.steps__box-image {
+		max-width: 35px;
+	}
+
+	.steps__item {
+		margin: 0;
+		font-size: 10px;
+		line-height: 12px;
+		color: #0D606F;
+	}
+}
+
+/**********************************************************************************SLIDER*/
+/**********************************************max-width: 831px*/
+@media (max-width: 831px) {
+
+	.destinations__row {
+		margin: 0 -370px 23px -370px;
+	}
+
+	.destinations__column {
+		max-width: 500px;
+		height: 400px;
+	}
+}
+
+/**********************************************max-width: 461px*/
+@media (max-width: 461px) {
+	.destinations__title-block {
+		margin-bottom: 20px;
+	}
+
+	.main__destinations {
+		margin-bottom: 0;
+	}
+
+	.destinations__circle-row {
+		margin-bottom: 20px;
+	}
+
+	.destinations__button {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+
+	}
+}
+
+/**********************************************max-width: 391px*/
+@media (max-width: 391px) {
+
+	.main__destinations {
+		position: relative;
+	}
+
+	.destinations__slider {
+		position: relative;
+		max-width: 390px;
+		padding: 0 15px;
+	}
+
+	.destinations__row {
+		margin: 0 -470px 2px -470px;
+	}
+
+	.destinations__column {
+		max-width: 360px;
+		height: 210px;
+	}
+
+	.order-1 {
+		order: 2
+	}
+
+	.order-2 {
+		order: 1
+	}
+
+	.order-3 {
+		order: 3
+	}
+
+	.destinations__item {
+		top: 0;
+		left: 16px;
+		font-size: 20px;
+	}
+
+	.destinations__slider-button {
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: 92px;
+
+		border: 1px solid #000;
+	}
+
+	.destinations__next,
+	.destinations__prew {
+		position: relative;
+		top: 0;
+		border: none;
+		background: none;
+	}
+
+	.destinations__next {
+		right: 0;
+	}
+
+	.destinations__prew {}
+
+	.destinations__circle-row {
+		max-width: 40px;
+		margin-bottom: 0;
+		position: relative;
+		bottom: 23px;
+		left: 4px;
+	}
+
+	.destinations__circle {
+		width: 8px;
+		height: 8px;
+		margin: 0;
+	}
+}
+
+/**********************************************************************************STORIES*/
+/**********************************************max-width: 1001px*/
+@media (max-width: 1001px) {
+	.stories__subtitle {
+		margin: 0 0 5px 0;
+		font-size: 25px;
+		line-height: 35px;
+	}
+
+	.stories__image-block {
+		flex: 1 0 300px;
+	}
+
+	.stories__text-block {
+		padding: 0 6px 0 15px;
+	}
+
+	.stories__text {
+		font-size: 17px;
+		line-height: 23px;
+	}
+
+	.stories__text-link {
+		font-size: 17px;
+		line-height: 23px;
+	}
+}
+
+/**********************************************max-width: 761px*/
+@media (max-width: 761px) {
+
+	.stories__subtitle {
+		margin: 0 0 5px 0;
+		font-size: 22px;
+		line-height: 32px;
+	}
+
+	.stories__image-block {
+		flex: 1 0 300px;
+	}
+
+	.stories__text {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+/**********************************************max-width: 701px*/
+@media (max-width: 701px) {
+
+	.stories__item {
+		flex-direction: column;
+	}
+
+	.stories__image-block {
+		margin-bottom: 15px;
+	}
+}
+
+/**********************************************max-width: 461px*/
+@media (max-width: 461px) {
+
+	.stories__title-block {
+		margin-bottom: 0;
+	}
+
+	.stories__button {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+/**********************************************max-width: 391px*/
+@media (max-width: 391px) {
+
+	.stories__title-block {
+		margin-bottom: 8px;
+	}
+
+	.stories__column {
+		margin-bottom: 2px;
+	}
+
+	.stories__item {
+		flex-direction: row;
+		padding: 8px 0;
+	}
+
+	.stories__image-block {
+		flex: 1 0 156px;
+		margin-bottom: 0;
+		height: 128px;
+
+		box-shadow: 0px 4px 5px #0d606f;
+	}
+
+	.stories__subtitle {
+		margin: 0 0 2px 0;
+		font-size: 11px;
+		line-height: 23px;
+	}
+
+	.stories__text-block {
+		padding: 0 5px 0 10px;
+	}
+
+	.stories__text {
+		display: none;
+	}
+
+	.stories__text-mobile {
+		display: block;
+		margin: 0;
+		font-family: 'Aleo';
+		font-weight: 400;
+		font-size: 9px;
+		line-height: 11px;
+	}
+
+	.stories__text-link {
+		font-size: 9px;
+		line-height: 11px;
+	}
+
+	.stories-background {
+		padding: 10px 0 13px 0;
+		background: url('../assets/stories/background-mobile.jpg') center 3px / cover no-repeat;
+	}
+}
+
+/**********************************************max-width: 371px*/
+@media (max-width: 371px) {
+
+	.stories__item {
+		flex-direction: column;
+	}
+
+	.stories__image-block {
+		flex: 1 0 140px;
+		height: 129px;
+	}
+
+	.stories__subtitle {
+		margin: 5px 0 0 0;
+		font-size: 14px;
+		line-height: 26px;
+	}
+
+	.stories__text-mobile {
+		margin: 0 0 5px 0;
+		font-size: 9px;
+		line-height: 11px;
+	}
+}
+
+/**********************************************************************************FOOTER*/
+/**********************************************max-width: 561px*/
+@media (max-width: 561px) {
+	.footer__text {
+		display: none;
+	}
+}
+
+/**********************************************max-width: 391px*/
+@media (max-width: 391px) {
+
+	.footer {
+		min-height: 65px;
+		background: url('../assets/stories/background-mobile.jpg') center bottom / cover no-repeat;
+	}
+
+	.footer__row {
+		display: block;
+	}
+
+	.footer__info {
+		display: none;
+	}
+
+	.info__link {
+		line-height: 0;
+		padding: 15px 9px;
+	}
+
+	.social {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.social__list {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.social__item-mobile {
+		display: block;
+	}
+
+	.info__img-big {
+		width: 30px;
+	}
+
+	.social__link {
+		line-height: 0;
+		padding: 18px 10px;
+	}
+}
