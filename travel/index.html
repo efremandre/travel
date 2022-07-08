@@ -122,33 +122,57 @@
 				<div class="destinations__title-block">
 					<h2 class="destinations__title title">Popular destinations</h2>
 				</div>
-				<div class="destinations__slider">
+
+				<div class="destinations__wrapper">
 
 					<div class="destinations__row">
-						<div class="destinations__column order-1"><img src="./assets/destinations/spain.jpg" alt="Spain"
-								class="destinations__image"><span class="destinations__item">Spain</span>
-						</div>
-						<div class="destinations__column order-2"><img src="./assets/destinations/japan.jpg" alt="Japan"
-								class="destinations__image"><span class="destinations__item">Japan</span>
-						</div>
-						<div class="destinations__column order-3"><img src="./assets/destinations/use.jpg" alt="USA"
-								class="destinations__image"><span class="destinations__item">USA</span>
-						</div>
-					</div>
 
-					<div class="destinations__slider-button">
-						<button class="destinations__next"><img src="./assets/destinations/prew.svg" alt="Preview"></button>
-						<button class="destinations__prew"><img src="./assets/destinations/next.svg" alt="Next"></button>
+						<div class="destinations__slides">
+							<div class="destinations__slide order-1">
+								<div class="destinations__slide-content">
+									<img class="destinations__image" src="./assets/destinations/spain.jpg" alt="Spain"><span
+										class="destinations__item">Spain</span>
+								</div>
+							</div>
+							<div class="destinations__slide order-2">
+								<div class="destinations__slide-content">
+									<img class="destinations__image" src="./assets/destinations/japan.jpg" alt="Japan"><span
+										class="destinations__item">Japan</span>
+								</div>
+
+							</div>
+							<div class="destinations__slide order-3">
+								<div class="destinations__slide-content">
+									<img class="destinations__image" src="./assets/destinations/use.jpg" alt="USA"><span
+										class="destinations__item">USA</span>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="destinations__btn btn_next">
+							<button class="destinations__next"><img class="destinations_btn-img" src="./assets/destinations/next.svg"
+									alt="Next"></button>
+						</div>
+
+						<div class="destinations__btn btn_prev">
+							<button class="destinations__prev"><img class="destinations_btn-img" src="./assets/destinations/prev.svg"
+									alt="Preview"></button>
+						</div>
 					</div>
 
 					<div class="destinations__circle-row">
-						<div class="destinations__circle circle-opacity"></div>
-						<div class="destinations__circle"></div>
-						<div class="destinations__circle circle-opacity"></div>
+						<span class="destinations__circle circle-opacity"></span>
+						<span class="destinations__circle"></span>
+						<span class="destinations__circle circle-opacity"></span>
 					</div>
 
 				</div>
-				<div class="destinations__button"><a href="#" class="destinations__link link">Find More</a></div>
+
+				<div class="destinations__button">
+					<a href="#" class="destinations__link link">Find More</a>
+				</div>
+			</section>
 			</section>
 			<section class="main__stories stories" id="stories">
 				<div class="container">
@@ -334,6 +358,9 @@
 	</div>
 
 	<script src="./script/index.js"></script>
+	<script src="./script/slider.js"></script>
+	<script src="./script/burger.js"></script>
+
 </body>
 
 </html>
