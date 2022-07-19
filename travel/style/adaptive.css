@@ -506,10 +506,6 @@
 		padding: 0 20px;
 	}
 
-	.destinations__btn {
-		top: calc(50% - 50px);
-	}
-
 	.destinations__next,
 	.destinations__prev {
 		width: 100px;
@@ -576,10 +572,6 @@
 			font-size: 20px;
 		}
 
-		.destinations__btn {
-			top: calc(50% - 51px);
-		}
-
 		.destinations__next,
 		.destinations__prev {
 			width: 50px;
@@ -589,11 +581,15 @@
 		}
 
 		.btn_next {
-			right: 9px;
+			right: 0;
 		}
 
 		.btn_prev {
-			left: 9px;
+			left: 0;
+		}
+
+		.destinations_btn-img {
+			display: block;
 		}
 
 		.destinations__circle-row {

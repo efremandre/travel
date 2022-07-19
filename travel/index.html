@@ -21,6 +21,11 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
+			<div class="popup-background">
+				<div class="popup">
+					<h5>This PopUP</h5>
+				</div>
+			</div>
 			<div class="header__menu-background">
 				<div class="container">
 					<div class="header__menu menu">
@@ -151,20 +156,18 @@
 
 						</div>
 						<div class="destinations__btn btn_next">
-							<button class="destinations__next"><img class="destinations_btn-img" src="./assets/destinations/next.svg"
-									alt="Next"></button>
+							<img class="destinations_btn-img" src="./assets/destinations/next.svg" alt="Next">
 						</div>
 
 						<div class="destinations__btn btn_prev">
-							<button class="destinations__prev"><img class="destinations_btn-img" src="./assets/destinations/prev.svg"
-									alt="Preview"></button>
+							<img class="destinations_btn-img" src="./assets/destinations/prev.svg" alt="Preview">
 						</div>
 					</div>
 
 					<div class="destinations__circle-row">
-						<span class="destinations__circle circle-opacity"></span>
 						<span class="destinations__circle"></span>
-						<span class="destinations__circle circle-opacity"></span>
+						<span class="destinations__circle active"></span>
+						<span class="destinations__circle"></span>
 					</div>
 
 				</div>
@@ -359,6 +362,7 @@
 
 	<script src="./script/index.js"></script>
 	<script src="./script/slider.js"></script>
+	<script src="./script/popup.js"></script>
 	<script src="./script/burger.js"></script>
 
 </body>
