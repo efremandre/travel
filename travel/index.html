@@ -21,12 +21,42 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="popup-background">
-				<div class="popup">
-					<h5>This PopUP</h5>
+			<section class="header__popup-wrapper popup">
+				<div class="popup__content">
+					<div class="popup__container">
+						<h3 class="popup__title">Log in to your account</h3>
+						<div class="popup__signin-btn signin-btn">
+							<a class="signin-btn__link popup__btn-style signin__btn_fb " target="_blank"
+								href="https://www.facebook.com/login/">Sign In
+								with Facebook</a>
+							<a class="signin-btn__link popup__btn-style signin__btn_google" target="_blank"
+								href="https://www.google.com/intl/ru/gmail/about/">Sign In with Google</a>
+						</div>
+						<div class="popup__separator">
+							<span class="popup__separator-contnet">or</span>
+						</div>
+						<div class="popup__form-popup form-popup">
+							<form action="#" class="form-popup__row">
+								<div class="form-popup__block">
+									<label class="form-popup__input-name" for="email">E-mail</label>
+									<input class="form-popup__input form-popup__input_email" type="email" id="email">
+								</div>
+								<div class="form-popup__block">
+									<label class="form-popup__input-name" for="password">Password</label>
+									<input class="form-popup__input form-popup__input_password" type="password" id="password">
+								</div>
+								<button class="form-popup__sigin-btn popup__btn-style">Sign In</button>
+								<a class="form-popup__forgot-password-link" target="_blank" href="#">Forgot Your Password?</a>
+							</form>
+						</div>
+						<div class="popup__footer">
+							<p class="popup__footer-content">Don’t have an account? <a class="popup__footer-link" target="_blank"
+									href="#">Register</a></p>
+						</div>
+					</div>
 				</div>
-			</div>
-			<div class="header__menu-background">
+			</section>
+			<section class="header__menu-background">
 				<div class="container">
 					<div class="header__menu menu">
 						<div class="header__logo logo"><img class="logo__image" src="./assets/header/logo.svg"
@@ -68,7 +98,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</header>
 		<main class="main">
 			<section class="main__preview preview">
