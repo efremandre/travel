@@ -13,11 +13,11 @@ body {
 }
 
 
-@media (max-width: 391px) {
-	.scroll-non {
-		overflow: hidden;
-	}
+
+body.scroll-non {
+	overflow: hidden;
 }
+
 
 ul {
 	margin: 0;
@@ -69,24 +69,72 @@ li {
 }
 
 /*************************************************************POPUP*/
-.header__popup-wrapper {
-	position: absolute;
-	z-index: 99999;
-	top: -100%;
+.popupreg-wrapper {
+	position: fixed;
+	z-index: 99998;
+	top: 0;
 	left: 0;
-	padding: 10px;
 	width: 100%;
 	height: 100%;
+	background-color: #2929296b;
+	visibility: hidden;
+	opacity: 0;
 
-	transition: 2s ease-in-out;
+	transition: 0.5s;
 }
 
-.header__popup-wrapper.active {
+.popup-wrapper {
+	position: fixed;
+	z-index: 99998;
 	top: 0;
-	background: #2929296b;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #2929296b;
+	visibility: hidden;
+	opacity: 0;
+
+	transition: 0.5s;
+}
+
+.popup-wrapper.active {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup__body {
+	padding: 0 10px;
 }
 
 .popup__content {
+	display: block;
+	max-width: 630px;
+	margin: 10px auto;
+	padding: 25px 10px 23px 10px;
+	transform: translateY(-100%);
+
+	font-family: 'Aleo';
+	color: #0D606F;
+
+	border-radius: 16px;
+	background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	transition: 0.8s;
+}
+
+.popup__content.active {
+	transform: translateY(0);
+}
+
+.popup__content.hidden {
+	display: none;
+}
+
+.popupreg__content {
+	display: none;
+	position: relative;
+	z-index: 99999;
 	max-width: 630px;
 	margin: 10px auto;
 	padding: 25px 10px 23px 10px;
@@ -97,6 +145,10 @@ li {
 	border-radius: 16px;
 	background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.popupreg__content.active {
+	display: block;
 }
 
 .popup__container {
@@ -176,8 +228,6 @@ li {
 .popup__separator {
 	position: relative;
 }
-
-.popup__separator-contnet {}
 
 .popup__separator-contnet::after,
 .popup__separator-contnet::before {
@@ -277,12 +327,18 @@ li {
 	text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
 }
 
+.popupreg-link {
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+	color: #0D606F;
+	text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
 .form-popup__forgot-password-link:hover,
 .popup__footer-link:hover {
 	text-decoration: none;
 }
-
-.popup__footer {}
 
 .popup__footer-content {
 	margin: 0;
