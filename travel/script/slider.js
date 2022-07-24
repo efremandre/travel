@@ -20,7 +20,6 @@ let offsetVisible = 0
 
 for (let i = 0; i < slide.length; i++) {
 	slider[i] = slide[i];
-	// slider[i].remove();
 }
 
 for (let i = 0; i < btnPagination.length; i++) {
@@ -28,25 +27,6 @@ for (let i = 0; i < btnPagination.length; i++) {
 }
 
 pagination[1].classList.add('active');
-
-// function createSlides() {
-// 	let block = document.createElement('div');
-
-// 	for (let i = 0; i < slider.length; i++) {
-// 		block = slider[step];
-// 		block.classList.add('destinations__slide');
-// 		document.querySelector('.destinations__slides').appendChild(block);
-
-// 		if (step + 1 == slider.length) {
-// 			step = 0;
-// 			offset = 1;
-// 		} else {
-// 			step++;
-// 			offset++;
-// 		}
-// 	}
-// }
-// createSlides();
 
 function getLeft() {
 	offsetVisible -= slideOffset;
@@ -56,10 +36,14 @@ function getLeft() {
 		pagination[0].classList.remove('active');
 		pagination[1].classList.remove('active');
 		pagination[2].classList.add('active');
+
+		btnNext.classList.add('hidden');
 	} else if (offsetVisible === 0) {
 		pagination[0].classList.remove('active');
 		pagination[1].classList.add('active');
 		pagination[2].classList.remove('active');
+
+		btnPrev.classList.remove('hidden');
 	}
 	console.log(offsetVisible);
 	console.log('Право');
@@ -69,17 +53,23 @@ function getRight() {
 	offsetVisible += slideOffset;
 	slidesTrack.style.transform = `translateX(${offsetVisible}px)`;
 
+	console.log(offsetVisible);
+	console.log('Лево');
+
 	if (offsetVisible === slideOffset) {
 		pagination[0].classList.add('active');
 		pagination[1].classList.remove('active');
 		pagination[2].classList.remove('active');
+
+		btnPrev.classList.add('hidden');
 	} else if (offsetVisible === 0) {
 		pagination[0].classList.remove('active');
 		pagination[1].classList.add('active');
 		pagination[2].classList.remove('active');
+
+		btnNext.classList.remove('hidden');
 	}
-	console.log(offsetVisible);
-	console.log('Лево');
+
 }
 
 btnNext.addEventListener('click', function () {

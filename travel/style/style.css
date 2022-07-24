@@ -188,11 +188,15 @@ li {
 	border-radius: 10px;
 	box-sizing: border-box;
 
-	transition: transform 0.5s linear;
+	transition: transform 0.1s linear;
 }
 
 .signin-btn__link:hover {
-	transform: scale(0.98);
+	opacity: 0.8;
+}
+
+.signin-btn__link:active {
+	transform: scale(0.97);
 }
 
 .signin__btn_fb {
@@ -310,13 +314,18 @@ li {
 	border: none;
 	background: #0D606F;
 
-	transition: transform 0.5s linear;
+	transition: transform 0.1s linear;
 }
 
 .form-popup__sigin-btn:hover {
 	cursor: pointer;
+	opacity: 0.8;
+}
+
+.form-popup__sigin-btn:active {
 	transform: scale(0.98);
 }
+
 
 .form-popup__forgot-password-link,
 .popup__footer-link {

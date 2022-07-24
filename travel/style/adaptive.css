@@ -547,6 +547,7 @@
 			max-width: 360px;
 			height: 210px;
 			margin-bottom: 2px;
+			padding: 0;
 		}
 
 		.destinations__slider {
@@ -581,11 +582,11 @@
 		}
 
 		.btn_next {
-			right: 0;
+			right: -35px;
 		}
 
 		.btn_prev {
-			left: 0;
+			left: -35px;
 		}
 
 		.destinations_btn-img {
