@@ -8,7 +8,6 @@
 
 /**********************************************max-width: 461px*/
 @media (max-width: 461px) {
-
 	.title {
 		font-size: 16px;
 	}
@@ -37,7 +36,6 @@
 		max-width: 83px;
 		height: 30px;
 		padding: 0 10px 0 30px;
-
 		font-size: 11px;
 		line-height: 15px;
 	}
@@ -73,7 +71,7 @@
 	}
 
 	.logo {
-		flex: 1 0 140px
+		flex: 1 0 140px;
 	}
 
 	.logo__image {
@@ -106,7 +104,6 @@
 
 /**********************************************max-width: 701px*/
 @media (max-width: 701px) {
-
 	.logo {
 		flex: 1 0 auto;
 	}
@@ -158,7 +155,6 @@
 
 /**********************************************max-width: 391px*/
 @media (max-width: 391px) {
-
 	.link::before {
 		display: block;
 		top: 12px;
@@ -170,7 +166,6 @@
 
 	.header__burger {
 		display: block;
-
 		transition: 1s;
 	}
 
@@ -197,7 +192,7 @@
 		transition: 0.7s;
 	}
 
-	.header__navigation.active-menu {
+	.header__navigation.active {
 		right: 0;
 	}
 
@@ -209,7 +204,6 @@
 		height: 250px;
 		padding: 26px 0;
 		box-sizing: border-box;
-
 		background: #F2785C;
 		box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
 		border-radius: 10px;
@@ -243,9 +237,8 @@
 	}
 
 	.navigation__item-order6 {
-		order: 6
+		order: 6;
 	}
-
 
 	.navigation__close {
 		display: block;
@@ -254,19 +247,17 @@
 		left: 8px;
 		width: 30px;
 		height: 30px;
-
 		opacity: 0;
 		transition: 4s;
 	}
 
-	.navigation__close.active-close {
+	.navigation__close.active {
 		opacity: 1;
 	}
 
 	.navigation__btn {
 		width: 100%;
 		height: 100%;
-
 		border: none;
 		background: url('../assets/header/close.svg') center center no-repeat;
 	}
@@ -334,7 +325,6 @@
 
 /**********************************************max-width: 631px*/
 @media (max-width: 631px) {
-
 	.main-title {
 		font-size: 30px;
 		line-height: 45px;
@@ -365,7 +355,6 @@
 
 /**********************************************max-width: 391px*/
 @media (max-width: 391px) {
-
 	.main__preview {
 		padding-top: 52px;
 		background: url('../assets/preview/garrett-mobile.jpg') center -91px no-repeat;
@@ -421,7 +410,6 @@
 /**********************************************************************************STEPS*/
 /********************************************max-width: 831px*/
 @media (max-width: 831px) {
-
 	.main__steps {
 		margin-bottom: 30px;
 	}
@@ -433,7 +421,6 @@
 
 /********************************************max-width: 461px*/
 @media (max-width: 461px) {
-
 	.main__steps {
 		margin-bottom: 9px;
 	}
@@ -454,7 +441,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-
 		padding: 8px 10px 10px;
 		flex: 1 1 90px;
 	}
@@ -462,7 +448,6 @@
 	.steps__text_left {
 		max-width: 76px;
 		margin: 0 auto;
-
 	}
 
 	.steps__text_left p {
@@ -496,14 +481,21 @@
 /**********************************************************************************SLIDER*/
 /**********************************************max-width: 831px*/
 @media (max-width: 831px) {
-
 	.destinations__row {
-		margin: 0 -370px 23px -370px;
+		max-width: 500px;
+		height: 100%;
 	}
 
-	.destinations__column {
-		max-width: 500px;
-		height: 400px;
+	.destinations__slide {
+		padding: 0 20px;
+	}
+
+	.destinations__next,
+	.destinations__prev {
+		width: 100px;
+		height: 100px;
+		border: none;
+		background: none;
 	}
 }
 
@@ -525,30 +517,25 @@
 		display: flex;
 		justify-content: center;
 		margin-bottom: 20px;
-
 	}
 }
 
 /**********************************************max-width: 391px*/
 @media (max-width: 391px) {
-
 	.main__destinations {
 		position: relative;
 	}
 
-	.destinations__slider {
-		position: relative;
-		max-width: 390px;
-		padding: 0 15px;
-	}
-
 	.destinations__row {
-		margin: 0 -470px 2px -470px;
-	}
-
-	.destinations__column {
 		max-width: 360px;
 		height: 210px;
+		margin-bottom: 2px;
+		padding: 0;
+	}
+
+	.destinations__slider {
+		position: relative;
+		padding: 0 15px;
 	}
 
 	.order-1 {
@@ -569,35 +556,32 @@
 		font-size: 20px;
 	}
 
-	.destinations__slider-button {
-		display: block;
-		position: absolute;
-		width: 100%;
-		top: 92px;
-
-		/* border: 1px solid #000; */
-	}
-
 	.destinations__next,
-	.destinations__prew {
-		position: relative;
-		top: 0;
+	.destinations__prev {
+		width: 50px;
+		height: 100px;
 		border: none;
 		background: none;
 	}
 
-	.destinations__next {
-		right: 0;
+	.btn_next {
+		right: -35px;
 	}
 
-	.destinations__prew {}
+	.btn_prev {
+		left: -35px;
+	}
+
+	.destinations_btn-img {
+		display: block;
+	}
 
 	.destinations__circle-row {
 		max-width: 40px;
 		margin-bottom: 0;
 		position: relative;
-		bottom: 23px;
-		left: 4px;
+		bottom: 19px;
+		left: 0;
 	}
 
 	.destinations__circle {
@@ -637,7 +621,6 @@
 
 /**********************************************max-width: 761px*/
 @media (max-width: 761px) {
-
 	.stories__subtitle {
 		margin: 0 0 5px 0;
 		font-size: 22px;
@@ -656,7 +639,6 @@
 
 /**********************************************max-width: 701px*/
 @media (max-width: 701px) {
-
 	.stories__item {
 		flex-direction: column;
 	}
@@ -668,7 +650,6 @@
 
 /**********************************************max-width: 461px*/
 @media (max-width: 461px) {
-
 	.stories__title-block {
 		margin-bottom: 0;
 	}
@@ -681,13 +662,12 @@
 
 /**********************************************max-width: 391px*/
 @media (max-width: 391px) {
-
 	.stories__title-block {
-		margin-bottom: 8px;
+		margin-bottom: 5px;
 	}
 
 	.stories__column {
-		margin-bottom: 2px;
+		margin-bottom: 4px;
 	}
 
 	.stories__item {
@@ -704,7 +684,7 @@
 	}
 
 	.stories__subtitle {
-		margin: 0 0 2px 0;
+		margin: 0 0 4px 0;
 		font-size: 11px;
 		line-height: 23px;
 	}
@@ -739,7 +719,6 @@
 
 /**********************************************max-width: 371px*/
 @media (max-width: 371px) {
-
 	.stories__item {
 		flex-direction: column;
 	}
@@ -772,7 +751,6 @@
 
 /**********************************************max-width: 391px*/
 @media (max-width: 391px) {
-
 	.footer {
 		min-height: 65px;
 		background: url('../assets/stories/background-mobile.jpg') center bottom / cover no-repeat;
@@ -814,4 +792,33 @@
 		line-height: 0;
 		padding: 18px 10px;
 	}
+}
+
+
+/***************************************************POPUP*/
+@media (max-width: 391px) {
+	.popup__content {
+		padding: 15px;
+	}
+
+	.signin-btn {
+		padding: 10px 0;
+	}
+
+	.popup__title {
+		font-size: 27px;
+	}
+
+	.signin__btn_fb {
+		margin-bottom: 10px;
+	}
+
+	.signin-btn__link {
+		padding: 10px;
+	}
+
+	.form-popup__input {
+		height: 45px;
+	}
+
 }
