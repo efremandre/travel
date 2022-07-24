@@ -8,7 +8,6 @@
 
 /**********************************************max-width: 461px*/
 @media (max-width: 461px) {
-
 	.title {
 		font-size: 16px;
 	}
@@ -37,7 +36,6 @@
 		max-width: 83px;
 		height: 30px;
 		padding: 0 10px 0 30px;
-
 		font-size: 11px;
 		line-height: 15px;
 	}
@@ -73,7 +71,7 @@
 	}
 
 	.logo {
-		flex: 1 0 140px
+		flex: 1 0 140px;
 	}
 
 	.logo__image {
@@ -106,7 +104,6 @@
 
 /**********************************************max-width: 701px*/
 @media (max-width: 701px) {
-
 	.logo {
 		flex: 1 0 auto;
 	}
@@ -158,7 +155,6 @@
 
 /**********************************************max-width: 391px*/
 @media (max-width: 391px) {
-
 	.link::before {
 		display: block;
 		top: 12px;
@@ -170,7 +166,6 @@
 
 	.header__burger {
 		display: block;
-
 		transition: 1s;
 	}
 
@@ -209,7 +204,6 @@
 		height: 250px;
 		padding: 26px 0;
 		box-sizing: border-box;
-
 		background: #F2785C;
 		box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
 		border-radius: 10px;
@@ -243,9 +237,8 @@
 	}
 
 	.navigation__item-order6 {
-		order: 6
+		order: 6;
 	}
-
 
 	.navigation__close {
 		display: block;
@@ -254,7 +247,6 @@
 		left: 8px;
 		width: 30px;
 		height: 30px;
-
 		opacity: 0;
 		transition: 4s;
 	}
@@ -266,7 +258,6 @@
 	.navigation__btn {
 		width: 100%;
 		height: 100%;
-
 		border: none;
 		background: url('../assets/header/close.svg') center center no-repeat;
 	}
@@ -334,7 +325,6 @@
 
 /**********************************************max-width: 631px*/
 @media (max-width: 631px) {
-
 	.main-title {
 		font-size: 30px;
 		line-height: 45px;
@@ -365,7 +355,6 @@
 
 /**********************************************max-width: 391px*/
 @media (max-width: 391px) {
-
 	.main__preview {
 		padding-top: 52px;
 		background: url('../assets/preview/garrett-mobile.jpg') center -91px no-repeat;
@@ -421,7 +410,6 @@
 /**********************************************************************************STEPS*/
 /********************************************max-width: 831px*/
 @media (max-width: 831px) {
-
 	.main__steps {
 		margin-bottom: 30px;
 	}
@@ -433,7 +421,6 @@
 
 /********************************************max-width: 461px*/
 @media (max-width: 461px) {
-
 	.main__steps {
 		margin-bottom: 9px;
 	}
@@ -454,7 +441,6 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-
 		padding: 8px 10px 10px;
 		flex: 1 1 90px;
 	}
@@ -462,7 +448,6 @@
 	.steps__text_left {
 		max-width: 76px;
 		margin: 0 auto;
-
 	}
 
 	.steps__text_left p {
@@ -496,7 +481,6 @@
 /**********************************************************************************SLIDER*/
 /**********************************************max-width: 831px*/
 @media (max-width: 831px) {
-
 	.destinations__row {
 		max-width: 500px;
 		height: 100%;
@@ -513,306 +497,328 @@
 		border: none;
 		background: none;
 	}
+}
 
-	/**********************************************max-width: 461px*/
-	@media (max-width: 461px) {
-		.destinations__title-block {
-			margin-bottom: 20px;
-		}
-
-		.main__destinations {
-			margin-bottom: 0;
-		}
-
-		.destinations__circle-row {
-			margin-bottom: 20px;
-		}
-
-		.destinations__button {
-			display: flex;
-			justify-content: center;
-			margin-bottom: 20px;
-
-		}
+/**********************************************max-width: 461px*/
+@media (max-width: 461px) {
+	.destinations__title-block {
+		margin-bottom: 20px;
 	}
 
-	/**********************************************max-width: 391px*/
-	@media (max-width: 391px) {
-
-		.main__destinations {
-			position: relative;
-		}
-
-		.destinations__row {
-			max-width: 360px;
-			height: 210px;
-			margin-bottom: 2px;
-			padding: 0;
-		}
-
-		.destinations__slider {
-			position: relative;
-			padding: 0 15px;
-		}
-
-		.order-1 {
-			order: 2
-		}
-
-		.order-2 {
-			order: 1
-		}
-
-		.order-3 {
-			order: 3
-		}
-
-		.destinations__item {
-			top: 0;
-			left: 16px;
-			font-size: 20px;
-		}
-
-		.destinations__next,
-		.destinations__prev {
-			width: 50px;
-			height: 100px;
-			border: none;
-			background: none;
-		}
-
-		.btn_next {
-			right: -35px;
-		}
-
-		.btn_prev {
-			left: -35px;
-		}
-
-		.destinations_btn-img {
-			display: block;
-		}
-
-		.destinations__circle-row {
-			max-width: 40px;
-			margin-bottom: 0;
-			position: relative;
-			bottom: 19px;
-			left: 0;
-		}
-
-		.destinations__circle {
-			width: 8px;
-			height: 8px;
-			margin: 0;
-		}
+	.main__destinations {
+		margin-bottom: 0;
 	}
 
-	/**********************************************************************************STORIES*/
-	/**********************************************max-width: 1001px*/
-	@media (max-width: 1001px) {
-		.stories__subtitle {
-			margin: 0 0 5px 0;
-			font-size: 25px;
-			line-height: 35px;
-		}
-
-		.stories__image-block {
-			flex: 1 0 300px;
-		}
-
-		.stories__text-block {
-			padding: 0 6px 0 15px;
-		}
-
-		.stories__text {
-			font-size: 17px;
-			line-height: 23px;
-		}
-
-		.stories__text-link {
-			font-size: 17px;
-			line-height: 23px;
-		}
+	.destinations__circle-row {
+		margin-bottom: 20px;
 	}
 
-	/**********************************************max-width: 761px*/
-	@media (max-width: 761px) {
+	.destinations__button {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+	}
+}
 
-		.stories__subtitle {
-			margin: 0 0 5px 0;
-			font-size: 22px;
-			line-height: 32px;
-		}
-
-		.stories__image-block {
-			flex: 1 0 300px;
-		}
-
-		.stories__text {
-			font-size: 14px;
-			line-height: 20px;
-		}
+/**********************************************max-width: 391px*/
+@media (max-width: 391px) {
+	.main__destinations {
+		position: relative;
 	}
 
-	/**********************************************max-width: 701px*/
-	@media (max-width: 701px) {
-
-		.stories__item {
-			flex-direction: column;
-		}
-
-		.stories__image-block {
-			margin-bottom: 15px;
-		}
+	.destinations__row {
+		max-width: 360px;
+		height: 210px;
+		margin-bottom: 2px;
+		padding: 0;
 	}
 
-	/**********************************************max-width: 461px*/
-	@media (max-width: 461px) {
-
-		.stories__title-block {
-			margin-bottom: 0;
-		}
-
-		.stories__button {
-			display: flex;
-			justify-content: center;
-		}
+	.destinations__slider {
+		position: relative;
+		padding: 0 15px;
 	}
 
-	/**********************************************max-width: 391px*/
-	@media (max-width: 391px) {
-
-		.stories__title-block {
-			margin-bottom: 5px;
-		}
-
-		.stories__column {
-			margin-bottom: 4px;
-		}
-
-		.stories__item {
-			flex-direction: row;
-			padding: 8px 0;
-		}
-
-		.stories__image-block {
-			flex: 1 0 156px;
-			margin-bottom: 0;
-			height: 128px;
-
-			box-shadow: 0px 4px 5px #0d606f;
-		}
-
-		.stories__subtitle {
-			margin: 0 0 4px 0;
-			font-size: 11px;
-			line-height: 23px;
-		}
-
-		.stories__text-block {
-			padding: 0 5px 0 10px;
-		}
-
-		.stories__text {
-			display: none;
-		}
-
-		.stories__text-mobile {
-			display: block;
-			margin: 0;
-			font-family: 'Aleo';
-			font-weight: 400;
-			font-size: 9px;
-			line-height: 11px;
-		}
-
-		.stories__text-link {
-			font-size: 9px;
-			line-height: 11px;
-		}
-
-		.stories-background {
-			padding: 10px 0 13px 0;
-			background: url('../assets/stories/background-mobile.jpg') center 3px / cover no-repeat;
-		}
+	.order-1 {
+		order: 2
 	}
 
-	/**********************************************max-width: 371px*/
-	@media (max-width: 371px) {
-
-		.stories__item {
-			flex-direction: column;
-		}
-
-		.stories__image-block {
-			flex: 1 0 140px;
-			height: 129px;
-		}
-
-		.stories__subtitle {
-			margin: 5px 0 0 0;
-			font-size: 14px;
-			line-height: 26px;
-		}
-
-		.stories__text-mobile {
-			margin: 0 0 5px 0;
-			font-size: 9px;
-			line-height: 11px;
-		}
+	.order-2 {
+		order: 1
 	}
 
-	/**********************************************************************************FOOTER*/
-	/**********************************************max-width: 561px*/
-	@media (max-width: 561px) {
-		.footer__text {
-			display: none;
-		}
+	.order-3 {
+		order: 3
 	}
 
-	/**********************************************max-width: 391px*/
-	@media (max-width: 391px) {
-
-		.footer {
-			min-height: 65px;
-			background: url('../assets/stories/background-mobile.jpg') center bottom / cover no-repeat;
-		}
-
-		.footer__row {
-			display: block;
-		}
-
-		.footer__info {
-			display: none;
-		}
-
-		.info__link {
-			line-height: 0;
-			padding: 15px 9px;
-		}
-
-		.social {
-			display: flex;
-			justify-content: space-between;
-			width: 100%;
-		}
-
-		.social__list {
-			justify-content: center;
-			align-items: center;
-		}
-
-		.social__item-mobile {
-			display: block;
-		}
-
-		.info__img-big {
-			width: 30px;
-		}
-
-		.social__link {
-			line-height: 0;
-			padding: 18px 10px;
-		}
+	.destinations__item {
+		top: 0;
+		left: 16px;
+		font-size: 20px;
 	}
+
+	.destinations__next,
+	.destinations__prev {
+		width: 50px;
+		height: 100px;
+		border: none;
+		background: none;
+	}
+
+	.btn_next {
+		right: -35px;
+	}
+
+	.btn_prev {
+		left: -35px;
+	}
+
+	.destinations_btn-img {
+		display: block;
+	}
+
+	.destinations__circle-row {
+		max-width: 40px;
+		margin-bottom: 0;
+		position: relative;
+		bottom: 19px;
+		left: 0;
+	}
+
+	.destinations__circle {
+		width: 8px;
+		height: 8px;
+		margin: 0;
+	}
+}
+
+/**********************************************************************************STORIES*/
+/**********************************************max-width: 1001px*/
+@media (max-width: 1001px) {
+	.stories__subtitle {
+		margin: 0 0 5px 0;
+		font-size: 25px;
+		line-height: 35px;
+	}
+
+	.stories__image-block {
+		flex: 1 0 300px;
+	}
+
+	.stories__text-block {
+		padding: 0 6px 0 15px;
+	}
+
+	.stories__text {
+		font-size: 17px;
+		line-height: 23px;
+	}
+
+	.stories__text-link {
+		font-size: 17px;
+		line-height: 23px;
+	}
+}
+
+/**********************************************max-width: 761px*/
+@media (max-width: 761px) {
+	.stories__subtitle {
+		margin: 0 0 5px 0;
+		font-size: 22px;
+		line-height: 32px;
+	}
+
+	.stories__image-block {
+		flex: 1 0 300px;
+	}
+
+	.stories__text {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}
+
+/**********************************************max-width: 701px*/
+@media (max-width: 701px) {
+	.stories__item {
+		flex-direction: column;
+	}
+
+	.stories__image-block {
+		margin-bottom: 15px;
+	}
+}
+
+/**********************************************max-width: 461px*/
+@media (max-width: 461px) {
+	.stories__title-block {
+		margin-bottom: 0;
+	}
+
+	.stories__button {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+/**********************************************max-width: 391px*/
+@media (max-width: 391px) {
+	.stories__title-block {
+		margin-bottom: 5px;
+	}
+
+	.stories__column {
+		margin-bottom: 4px;
+	}
+
+	.stories__item {
+		flex-direction: row;
+		padding: 8px 0;
+	}
+
+	.stories__image-block {
+		flex: 1 0 156px;
+		margin-bottom: 0;
+		height: 128px;
+
+		box-shadow: 0px 4px 5px #0d606f;
+	}
+
+	.stories__subtitle {
+		margin: 0 0 4px 0;
+		font-size: 11px;
+		line-height: 23px;
+	}
+
+	.stories__text-block {
+		padding: 0 5px 0 10px;
+	}
+
+	.stories__text {
+		display: none;
+	}
+
+	.stories__text-mobile {
+		display: block;
+		margin: 0;
+		font-family: 'Aleo';
+		font-weight: 400;
+		font-size: 9px;
+		line-height: 11px;
+	}
+
+	.stories__text-link {
+		font-size: 9px;
+		line-height: 11px;
+	}
+
+	.stories-background {
+		padding: 10px 0 13px 0;
+		background: url('../assets/stories/background-mobile.jpg') center 3px / cover no-repeat;
+	}
+}
+
+/**********************************************max-width: 371px*/
+@media (max-width: 371px) {
+	.stories__item {
+		flex-direction: column;
+	}
+
+	.stories__image-block {
+		flex: 1 0 140px;
+		height: 129px;
+	}
+
+	.stories__subtitle {
+		margin: 5px 0 0 0;
+		font-size: 14px;
+		line-height: 26px;
+	}
+
+	.stories__text-mobile {
+		margin: 0 0 5px 0;
+		font-size: 9px;
+		line-height: 11px;
+	}
+}
+
+/**********************************************************************************FOOTER*/
+/**********************************************max-width: 561px*/
+@media (max-width: 561px) {
+	.footer__text {
+		display: none;
+	}
+}
+
+/**********************************************max-width: 391px*/
+@media (max-width: 391px) {
+	.footer {
+		min-height: 65px;
+		background: url('../assets/stories/background-mobile.jpg') center bottom / cover no-repeat;
+	}
+
+	.footer__row {
+		display: block;
+	}
+
+	.footer__info {
+		display: none;
+	}
+
+	.info__link {
+		line-height: 0;
+		padding: 15px 9px;
+	}
+
+	.social {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+
+	.social__list {
+		justify-content: center;
+		align-items: center;
+	}
+
+	.social__item-mobile {
+		display: block;
+	}
+
+	.info__img-big {
+		width: 30px;
+	}
+
+	.social__link {
+		line-height: 0;
+		padding: 18px 10px;
+	}
+}
+
+
+/***************************************************POPUP*/
+@media (max-width: 391px) {
+	.popup__content {
+		padding: 15px;
+	}
+
+	.signin-btn {
+		padding: 10px 0;
+	}
+
+	.popup__title {
+		font-size: 27px;
+	}
+
+	.signin__btn_fb {
+		margin-bottom: 10px;
+	}
+
+	.signin-btn__link {
+		padding: 10px;
+	}
+
+	.form-popup__input {
+		height: 45px;
+	}
+
+}
