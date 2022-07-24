@@ -21,7 +21,7 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__menu-background">
+			<section class="header__menu-background">
 				<div class="container">
 					<div class="header__menu menu">
 						<div class="header__logo logo"><img class="logo__image" src="./assets/header/logo.svg"
@@ -42,7 +42,7 @@
 									<a href="#stories" class="navigation__link">Travel Stories</a>
 								</li>
 								<li class="navigation__item navigation__item-order5 navigation__item-account">
-									<a href="#" class="navigation__link">Acounts</a>
+									<a href="#" class="navigation__link login__link">Acounts</a>
 								</li>
 								<li class="navigation__item navigation__item-order6 navigation__item-social">
 									<a href="#" class="navigation__link">Social Media</a>
@@ -63,7 +63,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</section>
 		</header>
 		<main class="main">
 			<section class="main__preview preview">
@@ -151,20 +151,18 @@
 
 						</div>
 						<div class="destinations__btn btn_next">
-							<button class="destinations__next"><img class="destinations_btn-img" src="./assets/destinations/next.svg"
-									alt="Next"></button>
+							<img class="destinations_btn-img" src="./assets/destinations/next.svg" alt="Next">
 						</div>
 
 						<div class="destinations__btn btn_prev">
-							<button class="destinations__prev"><img class="destinations_btn-img" src="./assets/destinations/prev.svg"
-									alt="Preview"></button>
+							<img class="destinations_btn-img" src="./assets/destinations/prev.svg" alt="Preview">
 						</div>
 					</div>
 
 					<div class="destinations__circle-row">
-						<span class="destinations__circle circle-opacity"></span>
 						<span class="destinations__circle"></span>
-						<span class="destinations__circle circle-opacity"></span>
+						<span class="destinations__circle active"></span>
+						<span class="destinations__circle"></span>
 					</div>
 
 				</div>
@@ -357,8 +355,73 @@
 		</footer>
 	</div>
 
+	<div class="popup-wrapper popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<div class="popup__container">
+					<h3 class="popup__title">Log in to your account</h3>
+					<div class="popup__signin-btn signin-btn">
+						<a class="signin-btn__link popup__btn-style signin__btn_fb " target="_blank"
+							href="https://www.facebook.com/login/">Sign In
+							with Facebook</a>
+						<a class="signin-btn__link popup__btn-style signin__btn_google" target="_blank"
+							href="https://www.google.com/intl/ru/gmail/about/">Sign In with Google</a>
+					</div>
+					<div class="popup__separator">
+						<span class="popup__separator-contnet">or</span>
+					</div>
+					<div class="popup__form-popup form-popup">
+						<form action="#" class="form-popup__row">
+							<div class="form-popup__block">
+								<label class="form-popup__input-name" for="email">E-mail</label>
+								<input class="form-popup__input form-popup__input_email input-email" type="email" id="email">
+							</div>
+							<div class="form-popup__block">
+								<label class="form-popup__input-name" for="password">Password</label>
+								<input class="form-popup__input form-popup__input_password input-password" type="password"
+									id="password">
+							</div>
+							<button class="form-popup__sigin-btn popup__btn-style" id="sign-in">Sign In</button>
+							<a class="form-popup__forgot-password-link" target="_blank" href="#">Forgot Your Password?</a>
+						</form>
+					</div>
+					<div class="popup__footer">
+						<p class="popup__footer-content">Don’t have an account? <a class="popup__footer-link" href="#">Register</a>
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="popupreg__content">
+				<div class="popup__container">
+					<h3 class="popup__title">Create account</h3>
+					<div class="popup__form-popup form-popup">
+						<form action="#" class="form-popup__row">
+							<div class="form-popup__block">
+								<label class="form-popup__input-name" for="email2">E-mail</label>
+								<input class="form-popup__input form-popup__input_email input-email2" type="email" id="email2">
+							</div>
+							<div class="form-popup__block">
+								<label class="form-popup__input-name" for="password2">Password</label>
+								<input class="form-popup__input form-popup__input_password input-password2" type="password"
+									id="password2">
+							</div>
+							<button class="form-popup__sigin-btn popup__btn-style" id="sign-up">Sign Up</button>
+							<a class="form-popup__forgot-password-link" target="_blank" href="#">Forgot Your Password?</a>
+						</form>
+					</div>
+					<div class="popup__footer">
+						<p class="popup__footer-content">Already have an account? <a class="popupreg-link" href="#">Log in</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="./script/index.js"></script>
 	<script src="./script/slider.js"></script>
+	<script src="./script/popup.js"></script>
 	<script src="./script/burger.js"></script>
 
 </body>
