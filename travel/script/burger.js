@@ -1,4 +1,5 @@
 'use strict';
+
 //burger
 const menuBtn = document.querySelector('.header__burger');
 
