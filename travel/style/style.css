@@ -181,7 +181,9 @@ li {
 }
 
 .signin-btn__link {
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	padding: 15px;
 	text-decoration: none;
@@ -200,32 +202,31 @@ li {
 }
 
 .signin__btn_fb {
-	position: relative;
 	margin-bottom: 20px;
 	background: #1877F2;
 }
 
 .signin__btn_google {
-	position: relative;
 	color: #0D606F;
 	background: #FFFFFF;
 }
 
-.signin__btn_fb::after,
-.signin__btn_google::after {
+.signin__btn_fb::before,
+.signin__btn_google::before {
 	content: '';
-	position: absolute;
+	display: inline-block;
 	width: 23px;
 	height: 23px;
+	padding-right: 15px;
 }
 
-.signin__btn_fb::after {
-	left: 27%;
+.signin__btn_fb::before {
+	/* left: 27%; */
 	background: url('../assets/popup/fb.svg') center center no-repeat;
 }
 
-.signin__btn_google::after {
-	left: 29%;
+.signin__btn_google::before {
+	/* left: 29%; */
 	background: url('../assets/popup/google.svg') center center no-repeat;
 }
 
