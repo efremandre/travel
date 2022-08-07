@@ -30,3 +30,33 @@ function showTimeDate() {
 showTimeDate();
 ////////////////////////////
 
+// GREETINGS
+
+function showGreeting() {
+	const greeting = document.querySelector('.greeting');
+	const userName = document.querySelector('.name').value;
+
+	function getTimeOfDay() {
+		const newDate = new Date();
+		const hours = newDate.getHours();
+
+		if (hours > 6 && hours < 12) {
+			return 'morning';
+		} else if (hours > 12 && hours < 18) {
+			return 'afternoon';
+		} else if (hours > 18 && hours < 0) {
+			return 'evening';
+		} else if (hours > 0 && hours < 6) {
+			return 'night';
+		}
+	}
+
+	const timeOfDay = getTimeOfDay();
+	greeting.textContent = `Good ${timeOfDay}`;
+
+	setTimeout(showGreeting, 1000);
+}
+
+showGreeting();
+
+////////////////////////////
