@@ -34,25 +34,43 @@ showTimeDate();
 
 function showGreeting() {
 	const greeting = document.querySelector('.greeting');
-	const userName = document.querySelector('.name').value;
+	const userName = document.querySelector('.name');
 
 	function getTimeOfDay() {
 		const newDate = new Date();
 		const hours = newDate.getHours();
 
-		if (hours > 6 && hours < 12) {
+		if (hours >= 6 && hours < 12) {
 			return 'morning';
-		} else if (hours > 12 && hours < 18) {
+		} else if (hours >= 12 && hours < 18) {
 			return 'afternoon';
-		} else if (hours > 18 && hours < 0) {
+		} else if (hours >= 18) {
 			return 'evening';
-		} else if (hours > 0 && hours < 6) {
+		} else if (hours >= 0 && hours < 6) {
 			return 'night';
 		}
 	}
 
 	const timeOfDay = getTimeOfDay();
 	greeting.textContent = `Good ${timeOfDay}`;
+
+	// Сораняем имя в local storage
+	function setLocalStorage() {
+		localStorage.setItem('name', userName.value);
+	}
+
+	window.addEventListener('beforeunload', setLocalStorage);
+	////////////////////
+
+	// Достаем имя из local storage
+	function getLocalStorage() {
+		if (localStorage.getItem('name')) {
+			userName.value = localStorage.getItem('name');
+		}
+	}
+
+	window.addEventListener('load', getLocalStorage);
+	////////////////////
 
 	setTimeout(showGreeting, 1000);
 }
