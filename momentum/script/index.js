@@ -2,10 +2,10 @@
 
 
 // TIME and DATE
-function showTimeDate() {
-	const time = document.querySelector('.time');
-	const date = document.querySelector('.date');
+const time = document.querySelector('.time');
+const date = document.querySelector('.date');
 
+function showTimeDate() {
 	function showTime() {
 		const newDate = new Date();
 		const currentTime = newDate.toLocaleTimeString();
@@ -31,27 +31,27 @@ showTimeDate();
 ////////////////////////////
 
 // GREETINGS
+const greeting = document.querySelector('.greeting');
+const userName = document.querySelector('.name');
+
+function getTimeOfDay() {
+	const newDate = new Date();
+	const hours = newDate.getHours();
+
+	if (hours >= 6 && hours < 12) {
+		return 'morning';
+	} else if (hours >= 12 && hours < 18) {
+		return 'afternoon';
+	} else if (hours >= 18) {
+		return 'evening';
+	} else if (hours >= 0 && hours < 6) {
+		return 'night';
+	}
+}
+const timeOfDay = getTimeOfDay();
 
 function showGreeting() {
-	const greeting = document.querySelector('.greeting');
-	const userName = document.querySelector('.name');
 
-	function getTimeOfDay() {
-		const newDate = new Date();
-		const hours = newDate.getHours();
-
-		if (hours >= 6 && hours < 12) {
-			return 'morning';
-		} else if (hours >= 12 && hours < 18) {
-			return 'afternoon';
-		} else if (hours >= 18) {
-			return 'evening';
-		} else if (hours >= 0 && hours < 6) {
-			return 'night';
-		}
-	}
-
-	const timeOfDay = getTimeOfDay();
 	greeting.textContent = `Good ${timeOfDay}`;
 
 	// Сораняем имя в local storage
@@ -76,5 +76,49 @@ function showGreeting() {
 }
 
 showGreeting();
+
+////////////////////////////
+
+// SLIDER
+
+const body = document.querySelector('body');
+const slidePrev = document.querySelector('.slide-prev');
+const slideNext = document.querySelector('.slide-next');
+
+function getRandomNum() {
+	let result = Math.floor(Math.random() * (20 - 01 + 1) + 01);
+	return result;
+}
+let randomNum = getRandomNum();
+
+
+function setBg() {
+	let bgNum = String(randomNum).padStart(2, '0');
+	const img = new Image();
+	img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
+
+	img.onload = () => {
+		body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
+	};
+}
+setBg();
+
+slidePrev.addEventListener('click', getSlidePrev);
+function getSlidePrev() {
+	if (randomNum === 1) {
+		randomNum = 21;
+	}
+	randomNum -= 1;
+	setBg();
+}
+
+slideNext.addEventListener('click', getSlideNext);
+function getSlideNext() {
+	if (randomNum === 20) {
+		randomNum = 0;
+	}
+	randomNum += 1;
+	setBg();
+}
 
 ////////////////////////////
