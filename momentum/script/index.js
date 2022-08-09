@@ -100,6 +100,7 @@ function setBg() {
 	img.onload = () => {
 		body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
 	};
+	setTimeout(setBg, 2000);
 }
 setBg();
 
@@ -120,5 +121,16 @@ function getSlideNext() {
 	randomNum += 1;
 	setBg();
 }
+
+////////////////////////////
+
+// WEATHER
+async function getWeather() {
+	const url = `http://api.openweathermap.org/data/2.5/weather?q=Краснодар&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
+	const res = await fetch(url);
+	const data = await res.json();
+	console.log(data.weather[0].id, data.weather[0].description, data.main.temp);
+}
+getWeather();
 
 ////////////////////////////
