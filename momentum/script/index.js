@@ -125,12 +125,21 @@ function getSlideNext() {
 ////////////////////////////
 
 // WEATHER
+const weatherIcon = document.querySelector('.weather-icon');
+const temperature = document.querySelector('.temperature');
+const weatherDescript = document.querySelector('.weather-description');
+
+
 async function getWeather() {
 	const url = `http://api.openweathermap.org/data/2.5/weather?q=Краснодар&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
 	const res = await fetch(url);
 	const data = await res.json();
+	const roundTemp = Math.round(data.main.temp);
 	console.log(data.weather[0].id, data.weather[0].description, data.main.temp);
+
+	weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+	temperature.textContent = `${roundTemp}°C`;
+	weatherDescript.textContent = data.weather[0].description;
 }
 getWeather();
-
 ////////////////////////////
