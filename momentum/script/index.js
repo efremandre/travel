@@ -139,7 +139,7 @@ function errorM() {
 
 
 async function getWeather() {
-	const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
 	const res = await fetch(url);
 	const data = await res.json();
 
