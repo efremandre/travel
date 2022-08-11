@@ -128,18 +128,32 @@ function getSlideNext() {
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
 const weatherDescript = document.querySelector('.weather-description');
-
+const windSpeed = document.querySelector('.wind-speed');
+const humidity = document.querySelector('.humidity');
+const cityInput = document.querySelector('.city');
 
 async function getWeather() {
-	const url = `http://api.openweathermap.org/data/2.5/weather?q=Краснодар&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
+	const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
 	const res = await fetch(url);
 	const data = await res.json();
-	const roundTemp = Math.round(data.main.temp);
-	console.log(data.weather[0].id, data.weather[0].description, data.main.temp);
 
+	weatherIcon.className = 'weather-icon owf';
 	weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-	temperature.textContent = `${roundTemp}°C`;
+	temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
 	weatherDescript.textContent = data.weather[0].description;
+	windSpeed.textContent = `Скорость ветра ${data.wind.speed.toFixed(0)} м/с`;
+	humidity.textContent = `Влажность ${data.main.humidity.toFixed(0)}%`;
 }
-getWeather();
+
+
+function changeCity(e) {
+	if (e.code === 'Enter') {
+		getWeather();
+	}
+}
+
+document.addEventListener('DOMContentLoaded', getWeather);
+cityInput.addEventListener('keypress', changeCity);
+
 ////////////////////////////
+
