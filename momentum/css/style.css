@@ -10,6 +10,10 @@
 	padding: 0;
 }
 
+.hidden {
+	display: none;
+}
+
 body {
 	min-width: 480px;
 	min-height: 100vh;
@@ -120,6 +124,7 @@ body {
 }
 
 .weather {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -128,10 +133,6 @@ body {
 	width: 180px;
 	min-height: 180px;
 	text-align: left;
-}
-
-.weather-error {
-	margin-top: -10px;
 }
 
 .description-container {
@@ -159,10 +160,33 @@ body {
 	background-color: transparent;
 }
 
+.city.error {
+	border-bottom: 1px solid red;
+	color: red;
+}
+
 .city::placeholder {
 	font-size: 20px;
 	color: #fff;
 	opacity: .6;
+}
+
+.weather-error {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: -105%;
+	width: 100%;
+	margin-top: 0;
+	padding: 5px;
+	font-size: 14px;
+	/* background: #000;
+	border: 1px solid red; */
+	border-radius: 5px;
+}
+
+.active {
+	display: block;
 }
 
 .main {
