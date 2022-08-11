@@ -130,21 +130,35 @@ const temperature = document.querySelector('.temperature');
 const weatherDescript = document.querySelector('.weather-description');
 const windSpeed = document.querySelector('.wind-speed');
 const humidity = document.querySelector('.humidity');
+const errorWeather = document.querySelector('.weather-error');
 const cityInput = document.querySelector('.city');
+
+function errorM() {
+
+}
+
 
 async function getWeather() {
 	const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
 	const res = await fetch(url);
 	const data = await res.json();
 
-	weatherIcon.className = 'weather-icon owf';
-	weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-	temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
-	weatherDescript.textContent = data.weather[0].description;
-	windSpeed.textContent = `Скорость ветра ${data.wind.speed.toFixed(0)} м/с`;
-	humidity.textContent = `Влажность ${data.main.humidity.toFixed(0)}%`;
+	if (cityInput.value === data.name) {
+		weatherIcon.className = 'weather-icon owf';
+		weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+		temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
+		weatherDescript.textContent = data.weather[0].description;
+		windSpeed.textContent = `Скорость ветра ${data.wind.speed.toFixed(0)} м/с`;
+		humidity.textContent = `Влажность ${data.main.humidity.toFixed(0)}%`;
+		errorWeather.textContent = '';
+	} else if (cityInput.value === '' || cityInput.value === ' ') {
+		errorWeather.textContent = 'Знаешь, чтобы что-то найти, надо что-то ввести. Попробуй. 🙃';
+	} else {
+		errorWeather.textContent = "Точно верно ввел? 🤔 Попробуй еще раз.";
+	}
 }
 
+document.addEventListener('DOMContentLoaded', getWeather);
 
 function changeCity(e) {
 	if (e.code === 'Enter') {
@@ -152,7 +166,6 @@ function changeCity(e) {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', getWeather);
 cityInput.addEventListener('keypress', changeCity);
 
 ////////////////////////////
