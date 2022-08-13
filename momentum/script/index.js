@@ -131,7 +131,7 @@ const humidity = document.querySelector('.humidity');
 const errorWeather = document.querySelector('.weather-error');
 const errorText = document.querySelector('.error-text');
 const cityInput = document.querySelector('.city');
-console.log(cityInput.value + ' до функции');
+
 
 function errorMessageVisible() {
 	errorWeather.classList.add('active');
@@ -143,10 +143,26 @@ function errorMessageHidden() {
 	cityInput.classList.remove('active');
 }
 
+function setLocalStorageCity() {
+	localStorage.setItem('city', cityInput.value);
+}
+
+window.addEventListener('beforeunload', setLocalStorageCity);
+
+function getLocalStorageCity() {
+	if (localStorage.getItem('city')) {
+		cityInput.value = localStorage.getItem('city');
+	}
+}
+
+window.addEventListener('load', getLocalStorageCity);
+
 async function getWeather() {
+
 	const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=en&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
 	const res = await fetch(url);
 	const data = await res.json();
+
 
 	if (cityInput.value === '' || cityInput.value === ' ') {
 		errorMessageVisible();
@@ -175,20 +191,6 @@ async function getWeather() {
 
 document.addEventListener('DOMContentLoaded', getWeather);
 
-function setLocalStorageCity() {
-	localStorage.setItem('city', cityInput.value);
-}
-
-window.addEventListener('beforeunload', setLocalStorageCity);
-
-function getLocalStorageCity() {
-	if (localStorage.getItem('city')) {
-		cityInput.value = localStorage.getItem('city');
-	}
-}
-
-window.addEventListener('load', getLocalStorageCity);
-
 function changeCity(e) {
 	if (e.code === 'Enter') {
 		getWeather();
@@ -198,3 +200,38 @@ function changeCity(e) {
 cityInput.addEventListener('keypress', changeCity);
 ////////////////////////////
 
+// QUOTES
+const quoteText = document.querySelector('.quote');
+const quoteAuthor = document.querySelector('.author');
+const quoteBtn = document.querySelector('.change-quote');
+
+function randomNumQuote() {
+	let result = Math.floor(Math.random() * (20 - 01 + 1) + 01);
+	return result;
+}
+
+let randomNumQuot = randomNumQuote();
+
+quoteBtn.addEventListener('click', getChangeQuote);
+function getChangeQuote() {
+
+	if (randomNumQuot === 19) {
+		randomNumQuot = 0;
+	} else {
+		randomNumQuot += 1;
+	}
+	getQuotes();
+}
+
+async function getQuotes() {
+	const quotes = 'script/data.json';
+	const res = await fetch(quotes);
+	const data = await res.json();
+
+	quoteText.textContent = data[randomNumQuot].text;
+	quoteAuthor.textContent = data[randomNumQuot].author;
+
+}
+
+getQuotes();
+////////////////////////////

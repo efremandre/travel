@@ -234,10 +234,9 @@ body {
 .greeting-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: stretch;
+	justify-content: center;
 	align-items: center;
 	min-height: 48px;
-	width: 100vw;
 	font-size: 40px;
 }
 
