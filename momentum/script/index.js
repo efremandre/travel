@@ -1,6 +1,5 @@
 'use stript';
 
-
 // TIME and DATE
 const time = document.querySelector('.time');
 const date = document.querySelector('.date');
@@ -132,6 +131,7 @@ const humidity = document.querySelector('.humidity');
 const errorWeather = document.querySelector('.weather-error');
 const errorText = document.querySelector('.error-text');
 const cityInput = document.querySelector('.city');
+console.log(cityInput.value + ' до функции');
 
 function errorMessageVisible() {
 	errorWeather.classList.add('active');
@@ -159,22 +159,35 @@ async function getWeather() {
 			errorText.textContent = `Did you enter it correctly? 🤔 Again enter ${data.name}.`;
 			errorMessageVisible();
 		}
-
-
 	} else {
 		weatherIcon.className = 'weather-icon owf';
+
 		weatherIcon.classList.add(`owf-${data.weather[0].id}`);
 		temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
 		weatherDescript.textContent = data.weather[0].description;
 		windSpeed.textContent = `Wind speed: ${data.wind.speed.toFixed(0)} м/с`;
 		humidity.textContent = `Humidity: ${data.main.humidity.toFixed(0)}%`;
+
 		errorText.textContent = '';
-		errorWeather.classList.remove('active');
-		cityInput.classList.remove('active');
+		errorMessageHidden();
 	}
 }
 
 document.addEventListener('DOMContentLoaded', getWeather);
+
+function setLocalStorageCity() {
+	localStorage.setItem('city', cityInput.value);
+}
+
+window.addEventListener('beforeunload', setLocalStorageCity);
+
+function getLocalStorageCity() {
+	if (localStorage.getItem('city')) {
+		cityInput.value = localStorage.getItem('city');
+	}
+}
+
+window.addEventListener('load', getLocalStorageCity);
 
 function changeCity(e) {
 	if (e.code === 'Enter') {
@@ -183,6 +196,5 @@ function changeCity(e) {
 }
 
 cityInput.addEventListener('keypress', changeCity);
-
 ////////////////////////////
 
