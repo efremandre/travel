@@ -51,7 +51,6 @@ function getTimeOfDay() {
 const timeOfDay = getTimeOfDay();
 
 function showGreeting() {
-
 	greeting.textContent = `Good ${timeOfDay}`;
 
 	// Сораняем имя в local storage
@@ -145,23 +144,30 @@ function errorMessageHidden() {
 }
 
 async function getWeather() {
-	const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=en&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
 	const res = await fetch(url);
 	const data = await res.json();
 
 	if (cityInput.value === '' || cityInput.value === ' ') {
 		errorMessageVisible();
-		errorText.textContent = 'Знаешь, чтобы что-то найти, надо что-то ввести. Попробуй. 🙃';
+		errorText.textContent = 'To find something, you have to enter something. Try again 🙃';
 	} else if (cityInput.value !== data.name) {
-		errorText.textContent = "Точно верно ввел? 🤔 Попробуй еще раз.";
-		errorMessageVisible();
+		if (data.name === undefined) {
+			errorText.textContent = `Did you enter it correctly? 🤔 Try again.`;
+			errorMessageVisible();
+		} else {
+			errorText.textContent = `Did you enter it correctly? 🤔 Again enter ${data.name}.`;
+			errorMessageVisible();
+		}
+
+
 	} else {
 		weatherIcon.className = 'weather-icon owf';
 		weatherIcon.classList.add(`owf-${data.weather[0].id}`);
 		temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
 		weatherDescript.textContent = data.weather[0].description;
-		windSpeed.textContent = `Скорость ветра ${data.wind.speed.toFixed(0)} м/с`;
-		humidity.textContent = `Влажность ${data.main.humidity.toFixed(0)}%`;
+		windSpeed.textContent = `Wind speed: ${data.wind.speed.toFixed(0)} м/с`;
+		humidity.textContent = `Humidity: ${data.main.humidity.toFixed(0)}%`;
 		errorText.textContent = '';
 		errorWeather.classList.remove('active');
 		cityInput.classList.remove('active');
