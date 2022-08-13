@@ -160,7 +160,7 @@ body {
 	background-color: transparent;
 }
 
-.city.error {
+.city.active {
 	border-bottom: 1px solid red;
 	color: red;
 }
@@ -172,20 +172,19 @@ body {
 }
 
 .weather-error {
-	position: absolute;
+	position: relative;
+	display: none;
 	z-index: 100;
-	top: 0;
-	left: -105%;
 	width: 100%;
 	margin-top: 0;
 	padding: 5px;
 	font-size: 14px;
-	/* background: #000;
-	border: 1px solid red; */
+	background: #000;
+	border: 1px solid red;
 	border-radius: 5px;
 }
 
-.active {
+.weather-error.active {
 	display: block;
 }
 
