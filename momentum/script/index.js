@@ -252,20 +252,44 @@ getQuotes();
 // PLAYER
 const audio = document.querySelector('audio');
 const btnPlay = document.querySelector('.play');
+const btnPrev = document.querySelector('.play-prev');
+const btnNext = document.querySelector('.play-next');
 let isPlay = false;
+
+function toggleClassPlay() {
+	(isPlay === true) ? btnPlay.classList.add('pause') : btnPlay.classList.remove('pause');
+}
+
+function prevAudio() {
+	isPlay = true;
+	audio.play();
+	audio.currentTime = 0;
+	btnPlay.classList.add('pause');
+}
+
+function nextAudio() {
+	isPlay = true;
+	audio.play();
+	audio.currentTime = 0;
+	btnPlay.classList.add('pause');
+}
 
 function playAudio() {
 	if (!isPlay) {
+		console.log(isPlay)
 		audio.play();
 		isPlay = true;
-		btnPlay.classList.toggle('pause');
+		console.log(isPlay)
 	} else if (isPlay) {
 		audio.pause();
 		isPlay = false;
-		btnPlay.classList.toggle('pause');
 	}
 }
 
-
 btnPlay.addEventListener('click', playAudio);
+btnPlay.addEventListener('click', toggleClassPlay);
+btnPrev.addEventListener('click', prevAudio);
+btnPrev.addEventListener('click', toggleClassPlay);
+btnNext.addEventListener('click', nextAudio);
+btnPrev.addEventListener('click', toggleClassPlay);
 ////////////////////////////
