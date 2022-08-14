@@ -67,8 +67,6 @@ function showGreeting() {
 		greeting.textContent = 'Доброй ночи, ';
 	}
 
-
-
 	// Сораняем имя в local storage
 	function setLocalStorage() {
 		localStorage.setItem('name', userName.value);
@@ -110,10 +108,10 @@ let randomNum = getRandomNum();
 function setBg() {
 	let bgNum = String(randomNum).padStart(2, '0');
 	const img = new Image();
-	img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
+	img.src = `https://raw.githubusercontent.com/efremandre/stage-0/assets/images/${timeOfDay}/${bgNum}.jpg`;
 
 	img.onload = () => {
-		body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
+		body.style.backgroundImage = `url('https://raw.githubusercontent.com/efremandre/stage-0/assets/images/${timeOfDay}/${bgNum}.jpg')`;
 	};
 	setTimeout(setBg, 2000);
 }
@@ -154,12 +152,41 @@ const cityInput = document.querySelector('.city');
 function errorMessageVisible() {
 	errorWeather.classList.add('active');
 	cityInput.classList.add('active');
+	description.classList.add('hidden');
 }
 
 function errorMessageHidden() {
 	errorWeather.classList.remove('active');
 	cityInput.classList.remove('active');
+	errorText.textContent = '';
+	description.classList.remove('hidden');
 }
+
+async function getWeather() {
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
+	const res = await fetch(url);
+	const data = await res.json();
+
+	if (cityInput.value === '' || cityInput.value === ' ') {
+		errorText.textContent = 'Чтобы что-то найти, надо что-то ввести. Попробуй 🙃';
+		errorMessageVisible();
+	} else if (cityInput.value !== data.name) {
+		errorText.textContent = `Точно ввел без ошибок? 🤔 Попробуй ещё раз.`;
+		errorMessageVisible();
+	} else {
+		weatherIcon.className = 'weather-icon owf';
+
+		weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+		temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
+		weatherDescript.textContent = data.weather[0].description;
+		windSpeed.textContent = `Ветер: ${data.wind.speed.toFixed(0)} м/с`;
+		humidity.textContent = `Влажность: ${data.main.humidity.toFixed(0)}%`;
+
+		errorMessageHidden();
+	}
+}
+
+document.addEventListener('DOMContentLoaded', getWeather);
 
 function setLocalStorageCity() {
 	localStorage.setItem('city', cityInput.value);
@@ -175,51 +202,15 @@ function getLocalStorageCity() {
 
 window.addEventListener('load', getLocalStorageCity);
 
-async function getWeather() {
-
-	const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
-	const res = await fetch(url);
-	const data = await res.json();
-
-
-	if (cityInput.value === '' || cityInput.value === ' ') {
-		errorText.textContent = 'Чтобы что-то найти, надо что-то ввести. Попробуй 🙃';
-		description.classList.add('hidden');
-		errorMessageVisible();
-	} else if (cityInput.value !== data.name) {
-		if (data.name === undefined) {
-			errorText.textContent = `Точно ввел без ошибок? 🤔 Попробуй ещё раз.`;
-			description.classList.add('hidden');
-			errorMessageVisible();
-		} else {
-			errorText.textContent = `Точно ввел без ошибок? 🤔 Попробуй ввести ${data.name}.`;
-			description.classList.add('hidden');
-			errorMessageVisible();
-		}
-	} else {
-		weatherIcon.className = 'weather-icon owf';
-
-		weatherIcon.classList.add(`owf-${data.weather[0].id}`);
-		temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
-		weatherDescript.textContent = data.weather[0].description;
-		windSpeed.textContent = `Ветер: ${data.wind.speed.toFixed(0)} м/с`;
-		humidity.textContent = `Влажность: ${data.main.humidity.toFixed(0)}%`;
-
-		errorText.textContent = '';
-		description.classList.remove('hidden');
-		errorMessageHidden();
-	}
-}
-
-document.addEventListener('DOMContentLoaded', getWeather);
-
 function changeCity(e) {
 	if (e.code === 'Enter') {
 		getWeather();
 	}
+
 }
 
 cityInput.addEventListener('keypress', changeCity);
+
 ////////////////////////////
 
 // QUOTES
@@ -228,13 +219,13 @@ const quoteAuthor = document.querySelector('.author');
 const quoteBtn = document.querySelector('.change-quote');
 
 function randomNumQuote() {
-	let result = Math.floor(Math.random() * (20 - 01 + 1) + 01);
+	let result = Math.floor(Math.random() * (19 - 01 + 1) + 01);
 	return result;
 }
 
 let randomNumQuot = randomNumQuote();
 
-quoteBtn.addEventListener('click', getChangeQuote);
+quoteBtn.addEventListener('clic', getChangeQuote);
 function getChangeQuote() {
 
 	if (randomNumQuot === 19) {
@@ -256,4 +247,25 @@ async function getQuotes() {
 }
 
 getQuotes();
+////////////////////////////
+
+// PLAYER
+const audio = document.querySelector('audio');
+const btnPlay = document.querySelector('.play');
+let isPlay = false;
+
+function playAudio() {
+	if (!isPlay) {
+		audio.play();
+		isPlay = true;
+		btnPlay.classList.toggle('pause');
+	} else if (isPlay) {
+		audio.pause();
+		isPlay = false;
+		btnPlay.classList.toggle('pause');
+	}
+}
+
+
+btnPlay.addEventListener('click', playAudio);
 ////////////////////////////
