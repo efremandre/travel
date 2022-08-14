@@ -2,21 +2,28 @@
 
 // TIME and DATE
 const time = document.querySelector('.time');
+const hourse = document.querySelector('.hourse');
+const minutes = document.querySelector('.minutes');
+const seconds = document.querySelector('.seconds');
 const date = document.querySelector('.date');
 
 function showTimeDate() {
 	function showTime() {
 		const newDate = new Date();
-		const currentTime = newDate.toLocaleTimeString();
+		const currentHours = newDate.getHours();
+		const currentMinutes = newDate.getMinutes();
+		const currentSeconds = newDate.getSeconds();
 
-		time.textContent = currentTime;
+		hourse.textContent = `${String(currentHours).padStart(2, '0')}:`;
+		minutes.textContent = `${String(currentMinutes).padStart(2, '0')}:`;
+		seconds.textContent = String(currentSeconds).padStart(2, '0');
 		setTimeout(showTime, 1000);
 	}
 
 	function showDate() {
 		const newDate = new Date();
 		const options = { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'UTC' };
-		const currentDate = newDate.toLocaleDateString('en-US', options);
+		const currentDate = newDate.toLocaleDateString('ru-RU', options);
 
 		date.textContent = currentDate;
 		setTimeout(showDate, 1000);
@@ -50,7 +57,17 @@ function getTimeOfDay() {
 const timeOfDay = getTimeOfDay();
 
 function showGreeting() {
-	greeting.textContent = `Good ${timeOfDay}`;
+	if (timeOfDay === 'morning') {
+		greeting.textContent = 'Доброе утро, ';
+	} else if (timeOfDay === 'afternoon') {
+		greeting.textContent = 'Доброе утро, ';
+	} else if (timeOfDay === 'evening') {
+		greeting.textContent = 'Добрый вечер, ';
+	} else if (timeOfDay === 'night') {
+		greeting.textContent = 'Доброй ночи, ';
+	}
+
+
 
 	// Сораняем имя в local storage
 	function setLocalStorage() {
@@ -125,6 +142,7 @@ function getSlideNext() {
 // WEATHER
 const weatherIcon = document.querySelector('.weather-icon');
 const temperature = document.querySelector('.temperature');
+const description = document.querySelector('.description');
 const weatherDescript = document.querySelector('.weather-description');
 const windSpeed = document.querySelector('.wind-speed');
 const humidity = document.querySelector('.humidity');
@@ -159,20 +177,23 @@ window.addEventListener('load', getLocalStorageCity);
 
 async function getWeather() {
 
-	const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=en&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
+	const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput.value}&lang=ru&appid=e43b03b7f9011cbeaef0160a9bff32af&units=metric`;
 	const res = await fetch(url);
 	const data = await res.json();
 
 
 	if (cityInput.value === '' || cityInput.value === ' ') {
+		errorText.textContent = 'Чтобы что-то найти, надо что-то ввести. Попробуй 🙃';
+		description.classList.add('hidden');
 		errorMessageVisible();
-		errorText.textContent = 'To find something, you have to enter something. Try again 🙃';
 	} else if (cityInput.value !== data.name) {
 		if (data.name === undefined) {
-			errorText.textContent = `Did you enter it correctly? 🤔 Try again.`;
+			errorText.textContent = `Точно ввел без ошибок? 🤔 Попробуй ещё раз.`;
+			description.classList.add('hidden');
 			errorMessageVisible();
 		} else {
-			errorText.textContent = `Did you enter it correctly? 🤔 Again enter ${data.name}.`;
+			errorText.textContent = `Точно ввел без ошибок? 🤔 Попробуй ввести ${data.name}.`;
+			description.classList.add('hidden');
 			errorMessageVisible();
 		}
 	} else {
@@ -181,10 +202,11 @@ async function getWeather() {
 		weatherIcon.classList.add(`owf-${data.weather[0].id}`);
 		temperature.textContent = `${data.main.temp.toFixed(0)}°C`;
 		weatherDescript.textContent = data.weather[0].description;
-		windSpeed.textContent = `Wind speed: ${data.wind.speed.toFixed(0)} м/с`;
-		humidity.textContent = `Humidity: ${data.main.humidity.toFixed(0)}%`;
+		windSpeed.textContent = `Ветер: ${data.wind.speed.toFixed(0)} м/с`;
+		humidity.textContent = `Влажность: ${data.main.humidity.toFixed(0)}%`;
 
 		errorText.textContent = '';
+		description.classList.remove('hidden');
 		errorMessageHidden();
 	}
 }

@@ -129,46 +129,35 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
+	padding: 5px;
 	row-gap: 5px;
 	width: 180px;
-	min-height: 180px;
 	text-align: left;
 }
 
-.description-container {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-start;
-	align-items: center;
-	column-gap: 12px;
-}
-
-.weather-icon {
-	font-size: 44px;
-}
-
 .city {
-	width: 170px;
-	height: 34px;
-	padding: 5px;
-	font-size: 20px;
+	width: 100%;
+	font-size: 25px;
 	line-height: 24px;
 	color: #fff;
+	box-sizing: border-box;
 	border: 0;
 	outline: 0;
-	border-bottom: 1px solid #fff;
 	background-color: transparent;
 }
 
 .city.active {
-	border-bottom: 1px solid red;
-	color: red;
+	border-bottom: 1px solid #fc0404;
 }
 
 .city::placeholder {
 	font-size: 20px;
 	color: #fff;
 	opacity: .6;
+}
+
+.city:focus {
+	border-bottom: 1px solid #fff;
 }
 
 .weather-error {
@@ -179,13 +168,45 @@ body {
 	margin-top: 0;
 	padding: 5px;
 	font-size: 14px;
-	background: #000;
-	border: 1px solid red;
-	border-radius: 5px;
+	background: rgba(252, 4, 4, 0.1);
+	border-radius: 10px;
 }
 
 .weather-error.active {
 	display: block;
+}
+
+.description {
+	display: block;
+}
+
+.description.hidden {
+	display: none;
+}
+
+.temperature-block {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	font-size: 44px;
+}
+
+.temperature {
+	margin-right: 10px;
+	font-size: 33px;
+}
+
+.weather-description {
+	text-transform: capitalize;
+	margin-bottom: 5px;
+}
+
+.wind-speed {
+	margin-bottom: 5px;
+}
+
+.humidity {
+	margin-bottom: 5px;
 }
 
 .main {
@@ -218,17 +239,22 @@ body {
 }
 
 .time {
-	min-height: 124px;
+	display: flex;
+	justify-content: space-around;
+
 	margin-bottom: 10px;
 	font-family: 'Arial-MT';
-	font-size: 100px;
+	font-size: 120px;
 	letter-spacing: -4px;
 }
+
+.seconds {}
 
 .date {
 	min-height: 28px;
 	font-size: 24px;
 	margin-bottom: 20px;
+	text-transform: capitalize;
 }
 
 .greeting-container {
@@ -237,6 +263,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	min-height: 48px;
+	margin-bottom: 10px;
 	font-size: 40px;
 }
 
@@ -248,7 +275,7 @@ body {
 
 .name {
 	flex: 1;
-	max-width: 50%;
+	max-width: 45%;
 	padding: 10px;
 	font-size: 40px;
 	text-align: left;
@@ -271,7 +298,7 @@ body {
 	width: 100%;
 	height: 30vh;
 	min-height: 160px;
-	padding: 20px;
+	padding: 10px;
 }
 
 .change-quote {
@@ -279,12 +306,20 @@ body {
 	background-image: url("../assets/svg/reload.svg");
 }
 
+.quote-block {
+	padding: 10px;
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.3);
+}
+
 .quote {
 	min-height: 32px;
+	font-size: 20px;
 }
 
 .author {
 	min-height: 20px;
+	font-weight: 700;
 }
 
 @media (max-width: 768px) {

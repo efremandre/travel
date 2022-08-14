@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="кг">
 
 <head>
 	<meta charset="UTF-8" />
@@ -21,19 +21,20 @@
 			<ul class="play-list"></ul>
 		</div>
 		<div class="weather">
-			<input type="text" class="city" value="Minsk">
+			<input type="text" class="city" value="Минск">
 			<div class="weather-error">
 				<span class="error-text"></span>
 			</div>
-			<i class="weather-icon owf"></i>
-			<div class="description-container">
-				<span class="temperature"></span>
-				<span class="weather-description"></span>
-				<span class="wind-speed"></span>
-				<span class="humidity"></span>
+			<div class="description">
+				<div class="temperature-block">
+					<span class="temperature"></span>
+					<i class="weather-icon owf"></i>
+				</div>
+				<div class="weather-description"></div>
+				<div class="wind-speed"></div>
+				<div class="humidity"></div>
 			</div>
-			<div class="wind"></div>
-			<div class="humidity"></div>
+
 		</div>
 	</header>
 	<main class="main">
@@ -41,16 +42,20 @@
 			<button class="slide-prev slider-icon"></button>
 			<button class="slide-next slider-icon"></button>
 		</div>
-		<time class="time"></time>
+		<time class="time">
+			<span class="hourse"></span>
+			<span class="minutes"></span>
+			<span class="seconds"></span>
+		</time>
 		<date class="date"></date>
 		<div class="greeting-container">
 			<span class="greeting"></span>
-			<input type="text" class="name" placeholder="(enter name)" />
+			<input type="text" class="name" placeholder="[введи свое имя]" />
 		</div>
 	</main>
 	<footer class="footer">
 		<button class="change-quote"></button>
-		<div>
+		<div class="quote-block">
 			<div class="quote"></div>
 			<div class="author"></div>
 		</div>
