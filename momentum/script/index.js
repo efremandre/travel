@@ -1,4 +1,6 @@
 'use stript';
+import playList from './playlist.js';
+
 
 // TIME and DATE
 const time = document.querySelector('.time');
@@ -99,7 +101,7 @@ const slidePrev = document.querySelector('.slide-prev');
 const slideNext = document.querySelector('.slide-next');
 
 function getRandomNum() {
-	let result = Math.floor(Math.random() * (20 - 01 + 1) + 01);
+	let result = Math.floor(Math.random() * (20 - 1 + 1) + 1);
 	return result;
 }
 let randomNum = getRandomNum();
@@ -219,15 +221,15 @@ const quoteAuthor = document.querySelector('.author');
 const quoteBtn = document.querySelector('.change-quote');
 
 function randomNumQuote() {
-	let result = Math.floor(Math.random() * (19 - 01 + 1) + 01);
+	let result = Math.floor(Math.random() * (19 - 1 + 1) + 1);
 	return result;
 }
 
 let randomNumQuot = randomNumQuote();
 
-quoteBtn.addEventListener('clic', getChangeQuote);
+quoteBtn.addEventListener('click', getChangeQuote);
 function getChangeQuote() {
-
+	console.log('tap')
 	if (randomNumQuot === 19) {
 		randomNumQuot = 0;
 	} else {
@@ -254,42 +256,85 @@ const audio = document.querySelector('audio');
 const btnPlay = document.querySelector('.play');
 const btnPrev = document.querySelector('.play-prev');
 const btnNext = document.querySelector('.play-next');
+const list = document.querySelector('.play-list');
+
+const playListLength = playList.length;
+
 let isPlay = false;
+let playNum = 0;
+
+function creatPlaylist() {
+	playList.forEach((elem) => {
+		const li = document.createElement('li');
+		list.append(li);
+		li.classList.add('play-item');
+		li.textContent = `${elem.title}`;
+	})
+}
+creatPlaylist();
+
+function checkTrack() {
+	const item = document.querySelectorAll('.play-item');
+	item.forEach((el, index) => {
+		if (el.textContent === playList[playNum].title) {
+			el.classList.add('item-active');
+		} else {
+			el.classList.remove('item-active');
+		}
+	})
+}
 
 function toggleClassPlay() {
-	(isPlay === true) ? btnPlay.classList.add('pause') : btnPlay.classList.remove('pause');
+	isPlay ? btnPlay.classList.add('pause') : btnPlay.classList.remove('pause');
 }
 
-function prevAudio() {
-	isPlay = true;
-	audio.play();
-	audio.currentTime = 0;
+function scipTrack() {
+	audio.src = playList[playNum].src;
 	btnPlay.classList.add('pause');
+	audio.play();
+	isPlay = true;
 }
 
-function nextAudio() {
-	isPlay = true;
-	audio.play();
-	audio.currentTime = 0;
-	btnPlay.classList.add('pause');
+function autoScipTrack() {
+	audio.onended = function () {
+		playNum += 1;
+		if (playNum === playListLength) playNum = 0;
+		this.src = playList[playNum].src;
+		this.play();
+	}
 }
+autoScipTrack();
 
 function playAudio() {
 	if (!isPlay) {
-		console.log(isPlay)
+		audio.src = playList[playNum].src;
 		audio.play();
 		isPlay = true;
-		console.log(isPlay)
 	} else if (isPlay) {
 		audio.pause();
 		isPlay = false;
 	}
+	checkTrack();
+}
+
+function prevAudio() {
+	playNum -= 1;
+	if (playNum < 0) playNum = playListLength - 1;
+	checkTrack();
+	scipTrack();
+}
+
+function nextAudio() {
+	playNum += 1;
+	if (playNum === playListLength) playNum = 0;
+	checkTrack();
+	scipTrack();
 }
 
 btnPlay.addEventListener('click', playAudio);
 btnPlay.addEventListener('click', toggleClassPlay);
+
 btnPrev.addEventListener('click', prevAudio);
-btnPrev.addEventListener('click', toggleClassPlay);
 btnNext.addEventListener('click', nextAudio);
-btnPrev.addEventListener('click', toggleClassPlay);
+
 ////////////////////////////

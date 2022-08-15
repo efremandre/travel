@@ -63,14 +63,17 @@ body {
 }
 
 .play-item::before {
-	content: "\2713";
+	content: "";
 	position: absolute;
+	width: 10px;
+	height: 10px;
 	left: 0;
-	top: 2px;
+	top: 9px;
 	font-weight: 900;
+	background: url("../assets/svg/play.svg") 0 0/cover no-repeat;
 }
 
-.item-active::before {
+.item-active {
 	color: #C5B358;
 }
 
@@ -247,8 +250,6 @@ body {
 	font-size: 120px;
 	letter-spacing: -4px;
 }
-
-.seconds {}
 
 .date {
 	min-height: 28px;
