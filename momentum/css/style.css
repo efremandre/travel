@@ -46,14 +46,15 @@ body {
 
 .play-list {
 	text-align: left;
+	margin-left: 5px;
 }
 
 .play-item {
 	position: relative;
 	padding: 5px;
-	padding-left: 20px;
 	list-style: none;
-	opacity: .8;
+	border-radius: 5px;
+	opacity: .5;
 	cursor: pointer;
 	transition: .3s;
 }
@@ -62,20 +63,61 @@ body {
 	opacity: 1;
 }
 
-.play-item::before {
-	content: "";
-	position: absolute;
-	width: 10px;
-	height: 10px;
-	left: 0;
-	top: 9px;
-	font-weight: 900;
-	background: url("../assets/svg/play.svg") 0 0/cover no-repeat;
+.item-active {
+	opacity: 1;
 }
 
-.item-active {
-	color: #C5B358;
+/*EQ*/
+.eq {
+	display: none;
+	position: absolute;
+	top: 9px;
+	left: -10px;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 10px;
+	height: 10px;
 }
+
+.eq.active {
+	display: flex;
+}
+
+@keyframes go-up-down {
+	0% {
+		height: 0;
+	}
+
+	100% {
+		height: 8px;
+	}
+}
+
+.line-1 {
+	position: relative;
+	width: 2px;
+	height: 8px;
+	background-color: #fff;
+	animation: go-up-down 0.7s infinite alternate;
+}
+
+.line-2 {
+	position: relative;
+	width: 2px;
+	height: 8px;
+	background-color: #fff;
+	animation: go-up-down 0.6s infinite alternate;
+}
+
+.line-3 {
+	position: relative;
+	width: 2px;
+	height: 8px;
+	background-color: #fff;
+	animation: go-up-down 0.9s infinite alternate;
+}
+
+/*-----*/
 
 .player-icon,
 .slider-icon,

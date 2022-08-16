@@ -91,11 +91,9 @@ function showGreeting() {
 }
 
 showGreeting();
-
 ////////////////////////////
 
 // SLIDER
-
 const body = document.querySelector('body');
 const slidePrev = document.querySelector('.slide-prev');
 const slideNext = document.querySelector('.slide-next');
@@ -105,7 +103,6 @@ function getRandomNum() {
 	return result;
 }
 let randomNum = getRandomNum();
-
 
 function setBg() {
 	let bgNum = String(randomNum).padStart(2, '0');
@@ -117,7 +114,6 @@ function setBg() {
 	};
 	setTimeout(setBg, 2000);
 }
-setBg();
 
 slidePrev.addEventListener('click', getSlidePrev);
 function getSlidePrev() {
@@ -137,6 +133,7 @@ function getSlideNext() {
 	setBg();
 }
 
+setBg();
 ////////////////////////////
 
 // WEATHER
@@ -149,6 +146,7 @@ const humidity = document.querySelector('.humidity');
 const errorWeather = document.querySelector('.weather-error');
 const errorText = document.querySelector('.error-text');
 const cityInput = document.querySelector('.city');
+const defaultCity = 'Минск';
 
 
 function errorMessageVisible() {
@@ -188,13 +186,9 @@ async function getWeather() {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', getWeather);
-
 function setLocalStorageCity() {
 	localStorage.setItem('city', cityInput.value);
 }
-
-window.addEventListener('beforeunload', setLocalStorageCity);
 
 function getLocalStorageCity() {
 	if (localStorage.getItem('city')) {
@@ -202,17 +196,24 @@ function getLocalStorageCity() {
 	}
 }
 
-window.addEventListener('load', getLocalStorageCity);
+function setSuty() {
+	cityInput.value = (!localStorage.getItem('city'))
+		? cityInput.value = defaultCity
+		: cityInput.value = localStorage.getItem('city');
+}
+
+setSuty();
 
 function changeCity(e) {
 	if (e.code === 'Enter') {
 		getWeather();
 	}
-
 }
-
+document.addEventListener('DOMContentLoaded', getWeather);
+window.addEventListener('click', getWeather);
+window.addEventListener('beforeunload', setLocalStorageCity);
+window.addEventListener('load', getLocalStorageCity);
 cityInput.addEventListener('keypress', changeCity);
-
 ////////////////////////////
 
 // QUOTES
@@ -257,31 +258,56 @@ const btnPlay = document.querySelector('.play');
 const btnPrev = document.querySelector('.play-prev');
 const btnNext = document.querySelector('.play-next');
 const list = document.querySelector('.play-list');
-
 const playListLength = playList.length;
 
 let isPlay = false;
 let playNum = 0;
 
+
 function creatPlaylist() {
-	playList.forEach((elem) => {
+	playList.forEach((elem, index) => {
 		const li = document.createElement('li');
+		const div = document.createElement('div');
+		const span1 = document.createElement('span');
+		const span2 = document.createElement('span');
+		const span3 = document.createElement('span');
+
+		div.classList.add('eq');
+		span1.classList.add('line-1');
+		span2.classList.add('line-2');
+		span3.classList.add('line-3');
+
+		div.append(span1);
+		div.append(span2);
+		div.append(span3);
+
 		list.append(li);
+
 		li.classList.add('play-item');
-		li.textContent = `${elem.title}`;
+		li.textContent = `${index += 1}. ${elem.author} - ${elem.title}`;
+
+		li.append(div);
 	})
 }
-creatPlaylist();
+
+
+function getEqualizer() {
+	const eq = document.querySelectorAll('.eq');
+	eq.forEach((elem, index) => {
+		index === playNum && isPlay ? elem.classList.add('active') : elem.classList.remove('active');
+	})
+}
 
 function checkTrack() {
 	const item = document.querySelectorAll('.play-item');
-	item.forEach((el, index) => {
-		if (el.textContent === playList[playNum].title) {
-			el.classList.add('item-active');
+	item.forEach((elem, index) => {
+		if (index === playNum) {
+			elem.classList.add('item-active');
 		} else {
-			el.classList.remove('item-active');
+			elem.classList.remove('item-active');
 		}
-	})
+		getEqualizer();
+	});
 }
 
 function toggleClassPlay() {
@@ -293,6 +319,7 @@ function scipTrack() {
 	btnPlay.classList.add('pause');
 	audio.play();
 	isPlay = true;
+	getEqualizer();
 }
 
 function autoScipTrack() {
@@ -303,18 +330,18 @@ function autoScipTrack() {
 		this.play();
 	}
 }
-autoScipTrack();
 
 function playAudio() {
 	if (!isPlay) {
 		audio.src = playList[playNum].src;
 		audio.play();
 		isPlay = true;
+		checkTrack();
 	} else if (isPlay) {
 		audio.pause();
 		isPlay = false;
 	}
-	checkTrack();
+	getEqualizer();
 }
 
 function prevAudio() {
@@ -336,5 +363,8 @@ btnPlay.addEventListener('click', toggleClassPlay);
 
 btnPrev.addEventListener('click', prevAudio);
 btnNext.addEventListener('click', nextAudio);
+
+creatPlaylist();
+autoScipTrack();
 
 ////////////////////////////
