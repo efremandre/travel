@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="кг">
 
 <head>
 	<meta charset="UTF-8" />
@@ -13,25 +13,31 @@
 <body>
 	<header class="header">
 		<div class="player">
+			<audio></audio>
 			<div class="player-controls">
 				<button class="play-prev player-icon"></button>
 				<button class="play player-icon"></button>
 				<button class="play-next player-icon"></button>
 			</div>
-			<ul class="play-list"></ul>
+			<div class="playlist">
+				<ul class="play-list"></ul>
+			</div>
 		</div>
 		<div class="weather">
-			<input type="text" class="city" value="Минск">
-			<div class="weather-error"></div>
-			<i class="weather-icon owf"></i>
-			<div class="description-container">
-				<span class="temperature"></span>
-				<span class="weather-description"></span>
-				<span class="wind-speed"></span>
-				<span class="humidity"></span>
+			<input type="text" class="city">
+			<div class="weather-error">
+				<span class="error-text"></span>
 			</div>
-			<div class="wind"></div>
-			<div class="humidity"></div>
+			<div class="description">
+				<div class="temperature-block">
+					<span class="temperature"></span>
+					<i class="weather-icon owf"></i>
+				</div>
+				<div class="weather-description"></div>
+				<div class="wind-speed"></div>
+				<div class="humidity"></div>
+			</div>
+
 		</div>
 	</header>
 	<main class="main">
@@ -39,21 +45,25 @@
 			<button class="slide-prev slider-icon"></button>
 			<button class="slide-next slider-icon"></button>
 		</div>
-		<time class="time"></time>
+		<time class="time">
+			<span class="hourse"></span>
+			<span class="minutes"></span>
+			<span class="seconds"></span>
+		</time>
 		<date class="date"></date>
 		<div class="greeting-container">
 			<span class="greeting"></span>
-			<input type="text" class="name" placeholder="(your name)" />
+			<input type="text" class="name" placeholder="[введи свое имя]" />
 		</div>
 	</main>
 	<footer class="footer">
 		<button class="change-quote"></button>
-		<div>
+		<div class="quote-block">
 			<div class="quote"></div>
 			<div class="author"></div>
 		</div>
 	</footer>
-	<script src="script/index.js"></script>
+	<script type="module" src="script/index.js"></script>
 </body>
 
 </html>
