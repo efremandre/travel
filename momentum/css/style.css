@@ -336,20 +336,26 @@ body {
 .footer {
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-end;
-	align-items: center;
+	justify-content: space-between;
 	width: 100%;
 	height: 30vh;
 	min-height: 160px;
 	padding: 10px;
 }
 
+.quote-block {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 .change-quote {
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 	background-image: url("../assets/svg/reload.svg");
 }
 
-.quote-block {
+.quote-content {
 	padding: 10px;
 	border-radius: 10px;
 	background: rgba(0, 0, 0, 0.3);
@@ -363,6 +369,39 @@ body {
 .author {
 	min-height: 20px;
 	font-weight: 700;
+}
+
+.link-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 5px;
+}
+
+.link-name {
+	font-size: 16px;
+}
+
+.gh-link {
+	width: 30px;
+}
+
+.rs-link {
+	width: 60px;
+	padding: 3px;
+	background: #fae9686e;
+	border-radius: 3px;
+}
+
+.link-footer {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.link-footer:hover {
+	cursor: pointer;
+	opacity: .5;
 }
 
 @media (max-width: 768px) {

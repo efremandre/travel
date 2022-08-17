@@ -13,7 +13,8 @@
 <body>
 	<header class="header">
 		<div class="player">
-			<audio></audio>
+			<audio
+				ontimeupdate="document.querySelector('.tracktime').innerHTML = Math.floor(this.currentTime) + ':' + Math.floor(this.duration);"></audio>
 			<div class="player-controls">
 				<button class="play-prev player-icon"></button>
 				<button class="play player-icon"></button>
@@ -57,10 +58,24 @@
 		</div>
 	</main>
 	<footer class="footer">
-		<button class="change-quote"></button>
 		<div class="quote-block">
-			<div class="quote"></div>
-			<div class="author"></div>
+			<button class="change-quote"></button>
+			<div class="quote-content">
+				<div class="quote"></div>
+				<div class="author"></div>
+			</div>
+		</div>
+
+		<div class="link-block">
+			<div class="gh-link">
+				<a class="link-footer" href="https://github.com/efremandre"><img src="./assets/img/github.svg" alt="GH"></a>
+			</div>
+			<div class="link-name">
+				<p>by Efremov Andrey, 2022</p>
+			</div>
+			<div class="rs-link">
+				<a class="link-footer" href="https://rs.school/js-stage0/"><img src="./assets/img/rsschool.svg" alt="RS"></a>
+			</div>
 		</div>
 	</footer>
 	<script type="module" src="script/index.js"></script>
