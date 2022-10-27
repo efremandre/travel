@@ -1,8 +1,14 @@
-# efremandre-JSFEPRESCHOOL2022Q2
-Private repository for @efremandre
+# Travel
 
-# Contact
-[My CV](https://efremandre.github.io/rsschool-cv/)
+Учебный проект Travel. Отработка навыков верстки, обучение написанию JavaScript. 
 
-# Travel Deploy
-[Travel](https://rolling-scopes-school.github.io/efremandre-JSFEPRESCHOOL2022Q2/travel/)
+Используемые технологии: 
+ + HTML5
+ + CSS3
+ + FlexBox
+ + BEM
+ + JavaScript
+
+[>> Демка <<](https://efremandre.github.io/travel/)
+
+![127 0 0 1_5500_travel_index html](https://user-images.githubusercontent.com/25119216/198187613-7967e0c0-55fe-4378-87b6-ec64b90068ac.png)
